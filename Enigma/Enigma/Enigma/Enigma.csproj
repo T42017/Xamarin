@@ -38,9 +38,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BlueTooth.Mock\EnigmaDevice.cs" />
+    <Compile Include="BlueTooth.Mock\BlueToothManager.cs" />
+    <Compile Include="BlueTooth.Mock\IBlueToothDevice.cs" />
+    <Compile Include="BlueTooth.Mock\IBlueToothManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Packet.cs" />
+    <Compile Include="Model\Parameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
