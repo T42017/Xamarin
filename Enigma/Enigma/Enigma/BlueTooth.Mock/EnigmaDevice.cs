@@ -104,6 +104,7 @@ namespace Enigma.BlueTooth.Mock
 
         private void HandleIncomingParameter(Parameter parameter)
         {
+            parameter.Value = _parameters[parameter.Id];
             _readbuffer.AddRange(Packet.ToByteArray(parameter));
         }
 
