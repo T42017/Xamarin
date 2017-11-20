@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Enigma.Model
 {
-    public class Packet
+    public class SLIPPacket
     {
-        public const byte START = 192;
-        public const byte ESCAPE = 219;
+        public const byte END = 192;
+        public const byte ESC = 219;
 
-        public const byte STARTSTUFF = 220;
-        public const byte ESCAPESTUFF = 221;
+        public const byte ESC_END = 220;
+        public const byte ESC_ESC = 221;
         /*
-         * Packet is    START   1 byte
+         * Packet is    
          *              LENGTH  1 byte (pre escaped, always 6 for now)
          *              PAYLOAD 6 byte (default 
          *              CRC     1 byte
+         *              END     1 byte
          * */
 
         public static byte[] ToByteArray(Parameter parameter)
         {
             var data = new List<byte>();
-            data.Add(START);
             data.Add(6);
             var payload = parameter.ToByteArray();
             data.AddRange(payload);
@@ -33,12 +33,13 @@ namespace Enigma.Model
             for (int i = 1; i < data.Count; i++)
             {
                 byte b = data[i];
-                if (b == START || b == ESCAPE)
+                if (b == END || b == ESC)
                 {
-                    data.Insert(i, ESCAPE);
-                    data[i + 1] = (b == START) ? STARTSTUFF : ESCAPESTUFF;
+                    data.Insert(i, ESC);
+                    data[i + 1] = (b == END) ? ESC_END : ESC_ESC;
                 }
             }
+            data.Add(END);
 
             return data.ToArray();
         }

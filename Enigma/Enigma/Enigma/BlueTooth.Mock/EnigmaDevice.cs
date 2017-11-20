@@ -43,20 +43,20 @@ namespace Enigma.BlueTooth.Mock
 
             // there is a small chance that last byte is ESC and stuffing is missing
             // in that case save that byte in buffer
-            bool lastByteIsEsc = DeStuffBuffer.Last() == Packet.ESCAPE;
+            bool lastByteIsEsc = DeStuffBuffer.Last() == SLIPPacket.ESC;
 
             for (int i = 0; i < DeStuffBuffer.Count; i++)
             {
-                if (DeStuffBuffer[i] == Packet.ESCAPE && (i + 1) < DeStuffBuffer.Count)
+                if (DeStuffBuffer[i] == SLIPPacket.ESC && (i + 1) < DeStuffBuffer.Count)
                 {
-                    if (DeStuffBuffer[i + 1] == Packet.STARTSTUFF)
+                    if (DeStuffBuffer[i + 1] == SLIPPacket.ESC_END)
                     {
-                        DeStuffBuffer[i] = Packet.START;
+                        DeStuffBuffer[i] = SLIPPacket.END;
                         DeStuffBuffer.RemoveAt(i + 1);
                     }
-                    else if (DeStuffBuffer[i + 1] == Packet.ESCAPESTUFF)
+                    else if (DeStuffBuffer[i + 1] == SLIPPacket.ESC_ESC)
                     {
-                        DeStuffBuffer[i] = Packet.ESCAPE;
+                        DeStuffBuffer[i] = SLIPPacket.ESC;
                         DeStuffBuffer.RemoveAt(i + 1);
                     }
                 }
@@ -73,39 +73,32 @@ namespace Enigma.BlueTooth.Mock
                 DeStuffBuffer.Clear();
             }
 
-            int off = -1;
+            int off = _writebuffer.IndexOf(SLIPPacket.END);
 
-            for (int i = 0; i < _writebuffer.Count; i++)
+            while (off >= 0)
             {
-                if (_writebuffer[i] == Packet.START && (i + 2) < _writebuffer.Count)
+                try
                 {
-                    int length = _writebuffer[i + 1];
-                    if ((i + 2 + length) < _writebuffer.Count)
-                    {
-                        off = i + 2 + length;
-
-                        try
-                        {
-                            var p = Parameter.FromByteArray(_writebuffer.GetRange(i + 1, length).ToArray());
-                            i = i + 2 + length;
-                            if (p != null)
-                                HandleIncomingParameter(p);
-                        }
-                        catch (Exception ex)
-                        {
-                            throw new Exception("Error parsing packet: " + ex.Message, ex);
-                        }
-                    }
+                    var p = Parameter.FromByteArray(_writebuffer.GetRange(1, 6).ToArray());
+                    if (p != null)
+                        HandleIncomingParameter(p);
                 }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error parsing packet: " + ex.Message, ex);
+                }
+                finally
+                {
+                    _writebuffer.RemoveRange(0, off + 1);
+                }
+                off = _writebuffer.IndexOf(SLIPPacket.END);
             }
-
-            _writebuffer.RemoveRange(0, off+ 1);
         }
 
         private void HandleIncomingParameter(Parameter parameter)
         {
             parameter.Value = _parameters[parameter.Id];
-            _readbuffer.AddRange(Packet.ToByteArray(parameter));
+            _readbuffer.AddRange(SLIPPacket.ToByteArray(parameter));
         }
 
         /// <summary>

@@ -18,7 +18,7 @@ namespace Enigma
 
             IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
             var device = manager.Connect();
-            var buffer = Packet.ToByteArray(new Parameter()
+            var buffer = SLIPPacket.ToByteArray(new Parameter()
             {
                 Id = 1,
                 Value = 0
