@@ -42,6 +42,7 @@
     <Compile Include="BlueTooth.Mock\BlueToothManager.cs" />
     <Compile Include="BlueTooth.Mock\IBlueToothDevice.cs" />
     <Compile Include="BlueTooth.Mock\IBlueToothManager.cs" />
+    <Compile Include="Extensions\ByteArrayExtensions.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

@@ -16,10 +16,10 @@ namespace Enigma.Model
             var data = new byte[6];
             data[0] = (byte)(Id >> 8);
             data[1] = (byte)(Id & 0xFF);
-            data[2] = (byte)((Id >> 24) & 0xFF);
-            data[3] = (byte)((Id >> 16) & 0xFF);
-            data[4] = (byte)((Id >> 8) & 0xFF);
-            data[5] = (byte)(Id & 0xFF);
+            data[2] = (byte)((Value >> 24) & 0xFF);
+            data[3] = (byte)((Value >> 16) & 0xFF);
+            data[4] = (byte)((Value >> 8) & 0xFF);
+            data[5] = (byte)(Value & 0xFF);
 
             return data;
         }
