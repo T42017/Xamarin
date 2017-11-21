@@ -10,7 +10,6 @@ namespace Enigma.Droid
     [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
-        private bool _started = false;
 
         public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistantState)
         {
@@ -20,16 +19,8 @@ namespace Enigma.Droid
         protected override void OnStart()
         {
             base.OnStart();
-            if (!_started)
-            {
-                _started = true;
-                Task startupWork = new Task(() => { SimulateStartup(); });
-                startupWork.Start();
-            }
-            else
-            {
-                StartActivity(new Intent(Application.Context, typeof(MainActivity)));
-            }
+            Task startupWork = new Task(() => { SimulateStartup(); });
+            startupWork.Start();
         }
 
         async void SimulateStartup()

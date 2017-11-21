@@ -14,8 +14,9 @@ namespace Enigma
         {
             InitializeComponent();
 
-            MainPage = new Enigma.MainPage();
+            MainPage = new Enigma.ConnectPage();
 
+            
             IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
             var device = manager.Connect();
             var buffer = SLIPPacket.ToByteArray(new Parameter()
