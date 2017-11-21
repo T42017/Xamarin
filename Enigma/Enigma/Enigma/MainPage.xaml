@@ -4,10 +4,34 @@
              xmlns:local="clr-namespace:Enigma"
              x:Class="Enigma.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid BackgroundColor="#ff4284" Padding="10">
+                        <Image Source="shoe.png"/>
+                    </Grid>
+                    <Label Grid.Column="1" 
+                           Text="Home" 
+                           TextColor="#ff4284" 
+                           FontSize="20"
+                           Margin="5,0,0,0" 
+                           HorizontalOptions="Start" 
+                           VerticalOptions="Center"/>
+                </Grid>
+                <StackLayout Spacing="0" Grid.Row="1">
+                    <local:MyCustomControl TitleText="1" Image="ball.png" BackgroundColor="#76dab2" />
+                    <local:MyCustomControl TitleText="2" Image="basketball.png" BackgroundColor="#7c57e4" />
+                    <local:MyCustomControl TitleText="3" Image="shoe.png" BackgroundColor="#f1b136" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
