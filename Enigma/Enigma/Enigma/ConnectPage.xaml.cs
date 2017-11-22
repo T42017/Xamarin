@@ -22,5 +22,9 @@ namespace Enigma
         private void BluetoothConnect(object sender, EventArgs e)
         {
         }
+
+        private void Continue(object sender, EventArgs e)
+        {
+        }
     }
 }

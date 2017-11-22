@@ -5,7 +5,8 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#FFFFFF">
             <Image Source="ec_logo.png" Margin="0,100,0,0"/>
-            <Button Text="Connect To Device" Clicked="BluetoothConnect" Margin="40,150,40,0" BackgroundColor="#0082FB"/>
+            <Button Text="Connect To Device" Clicked="BluetoothConnect" Margin="60,100,60,0" BackgroundColor="#0082FB" BorderRadius="15" TextColor="White"></Button>
+            <Button Text="Continue Without Connecting" Clicked="Continue" Margin="60,100,60,0" BackgroundColor="#333333" BorderRadius="15" TextColor="White"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
