@@ -14,18 +14,20 @@ namespace Enigma
         {
             InitializeComponent();
 
-            MainPage = new Enigma.MainPage();
+            MainPage = new SettingsPage();
 
-            IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
-            var device = manager.Connect();
-            var buffer = SLIPPacket.ToByteArray(new Parameter()
-            {
-                Id = 1,
-                Value = 0
-            });
-            device.Write(buffer, 0, buffer.Length);
 
-            var hmm = device.BytesToRead;
+
+            //IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
+            //var device = manager.Connect();
+            //var buffer = SLIPPacket.ToByteArray(new Parameter()
+            //{
+            //    Id = 1,
+            //    Value = 0
+            //});
+            //device.Write(buffer, 0, buffer.Length);
+
+            //var hmm = device.BytesToRead;
         }
 
         protected override void OnStart()

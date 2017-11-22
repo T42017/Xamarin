@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Enigma.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="btn0" ClassId="StartCalibrationInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn0}, Path=ClassId}"/>
+                    <Button Grid.Row="0" Grid.Column="1" ClassId="StartCalibrationEvent" FontSize="10" Text="{Binding CalibrationStatus, StringFormat='Start Calibration: {0}'}" Command="{Binding  StartCalibrationCommand}"/>
+
+                    <Button Grid.Row="1" Grid.Column="0" x:Name="btn1" ClassId="UseStartPositionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn1}, Path=ClassId}"/>
+                    <Button Grid.Row="1" Grid.Column="1" ClassId="UseStartPositionEvent" FontSize="10" Text="Use Start Position: "/>
+
+                    <Button Grid.Row="2" Grid.Column="0" x:Name="btn2" ClassId="StartPositionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn2}, Path=ClassId}"/>
+                    <Button Grid.Row="2" Grid.Column="1" ClassId="StartPositionEvent" FontSize="10" Text="Start Position: " Clicked="ButtonEventHandler"/>
+
+                    <Button Grid.Row="3" Grid.Column="0" x:Name="btn3" ClassId="STOP_MODEMechInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn3}, Path=ClassId}"/>
+                    <Button Grid.Row="3" Grid.Column="1" ClassId="STOP_MODEMechEvent" FontSize="10" Text="STOP_MODE.Mech: " Clicked="ButtonEventHandler"/>
+
+                    <Button Grid.Row="4" Grid.Column="0" x:Name="btn4" ClassId="PowerUpWaitTimeInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn4}, Path=ClassId}"/>
+                    <Button Grid.Row="4" Grid.Column="1" ClassId="PowerUpWaitTimeEvent" FontSize="10" Text="Power Up Wait Time: " Clicked="ButtonEventHandler"/>
+
+                    <Button Grid.Row="5" Grid.Column="0" x:Name="btn5" ClassId="SpeedInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn5}, Path=ClassId}"/>
+                    <Button Grid.Row="5" Grid.Column="1" ClassId="SpeedEvent" FontSize="10" Text="Speed: " Clicked="ButtonEventHandler"/>
+
+                    <Button Grid.Row="6" Grid.Column="0" x:Name="btn6"  ClassId="MotionShiftInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn6}, Path=ClassId}"/>
+                    <Button Grid.Row="6" Grid.Column="1" ClassId="MotionShiftEvent" FontSize="10" Text="Motion Shift: " Clicked="ButtonEventHandler"/>
+
+                    <Button Grid.Row="7" Grid.Column="0" x:Name="btn7" ClassId="PositiveDirectionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference btn7}, Path=ClassId}"/>
+                    <Button Grid.Row="7" Grid.Column="1" ClassId="PositiveDirectionEvent" FontSize="10" Text="Positive Direction: " Clicked="ButtonEventHandler"/>
+                </Grid>
+            </ScrollView>
+            <Button HorizontalOptions="Center" Margin="0" Text="Reset All"/>
+            <Button HorizontalOptions="Center" Margin="0" Text="Load Settings"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
