@@ -11,23 +11,14 @@ namespace Enigma.Droid
     public class SplashActivity : AppCompatActivity
     {
 
-        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistantState)
+        protected override void OnResume()
         {
-            base.OnCreate(savedInstanceState, persistantState);
-        }
+            base.OnResume();
 
-        protected override void OnStart()
-        {
-            base.OnStart();
-            Task startupWork = new Task(() => { SimulateStartup(); });
-            startupWork.Start();
-        }
-
-        async void SimulateStartup()
-        {
-
-            await Task.Delay(3000); 
-            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            Task.Run(() =>
+            {
+                StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            });
         }
 
         public override void OnBackPressed() { }
