@@ -1,13 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Enigma"
-             x:Class="Enigma.MainPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="Enigma.MainPage"
+             >
+    
+    
+
+    
+
+    <ContentPage x:Name="RotationPage">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" BackgroundColor="CadetBlue"/>
+                    <Button Grid.Column ="1" Clicked="BtnPageChangeSettings"  Text="Settings"/>
+                    <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" />
+                    <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map"/>
+                </Grid>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <local:SettingsPage x:Name="SettingsPage">
+        <StackLayout VerticalOptions="End">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" />
+                <Button Grid.Column ="1" Clicked="BtnPageChangeSettings" BackgroundColor="CadetBlue" Text="Settings"/>
+                <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" />
+                <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map"/>
+            </Grid>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </local:SettingsPage>
+    <ContentPage x:Name="DiagnosticsPage">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" />
+                    <Button Grid.Column ="1" Clicked="BtnPageChangeSettings"  Text="Settings"/>
+                    <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" BackgroundColor="CadetBlue"/>
+                    <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map"/>
+                </Grid>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage x:Name="MapsPage">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="End">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" />
+                    <Button Grid.Column ="1" Clicked="BtnPageChangeSettings"  Text="Settings"/>
+                    <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" />
+                    <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map" BackgroundColor="CadetBlue"/>
+                </Grid>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+</CarouselPage>
