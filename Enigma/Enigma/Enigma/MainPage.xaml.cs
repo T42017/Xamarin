@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Enigma
 {
-    public partial class MainPage : CarouselPage
+    public partial class MainPage : TabbedPage
     {
         private SettingsPage setting;
         public MainPage()
@@ -16,18 +16,12 @@ namespace Enigma
             InitializeComponent();
             setting = new SettingsPage();
         }
-
-
-        public ContentPage MyProperty
-        {
-            get { return CurrentPage; }
-            set { CurrentPage = value; }
-        }
+        
 
 
         public void BtnPageChangeSettings(object sender, EventArgs e)
         {
-            
+
             this.CurrentPage = CurrentPage.FindByName<ContentPage>("SettingsPage");
         }
 

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+    
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Enigma"
              x:Class="Enigma.MainPage"
@@ -8,77 +9,27 @@
     
 
     
-
-    <ContentPage x:Name="RotationPage">
+    <ContentPage x:Name="RotationPage"  Title="Rotation" Icon="Rotation.png" >
+        
         <ContentPage.Content>
-            <StackLayout VerticalOptions="End">
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" BackgroundColor="CadetBlue"/>
-                    <Button Grid.Column ="1" Clicked="BtnPageChangeSettings"  Text="Settings"/>
-                    <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" />
-                    <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map"/>
-                </Grid>
-            </StackLayout>
+
         </ContentPage.Content>
+        
     </ContentPage>
-    <local:SettingsPage x:Name="SettingsPage">
-        <StackLayout VerticalOptions="End">
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" />
-                <Button Grid.Column ="1" Clicked="BtnPageChangeSettings" BackgroundColor="CadetBlue" Text="Settings"/>
-                <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" />
-                <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map"/>
-            </Grid>
-        </StackLayout>
+    
+    <local:SettingsPage x:Name="SettingsPage" Title="Settings" Icon="Maintenance.png">
+
     </local:SettingsPage>
-    <ContentPage x:Name="DiagnosticsPage">
+    <ContentPage x:Name="DiagnosticsPage" Title="Status" Icon="Diagnostics.png">
         <ContentPage.Content>
-            <StackLayout VerticalOptions="End">
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" />
-                    <Button Grid.Column ="1" Clicked="BtnPageChangeSettings"  Text="Settings"/>
-                    <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" BackgroundColor="CadetBlue"/>
-                    <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map"/>
-                </Grid>
-            </StackLayout>
+
         </ContentPage.Content>
     </ContentPage>
-    <ContentPage x:Name="MapsPage">
+    <ContentPage x:Name="MapsPage" Title="Map" Icon="Map.png">
         <ContentPage.Content>
-            <StackLayout VerticalOptions="End">
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column ="0" Clicked="BtnChangePageRotera" Text="Rotera" />
-                    <Button Grid.Column ="1" Clicked="BtnPageChangeSettings"  Text="Settings"/>
-                    <Button Grid.Column ="2" Clicked="BtnPageChangeDiagnostic" Text="Diagnostik" />
-                    <Button Grid.Column ="3" Clicked="BtnPageChangeMap" Text="Map" BackgroundColor="CadetBlue"/>
-                </Grid>
-            </StackLayout>
+
         </ContentPage.Content>
     </ContentPage>
 
 
-</CarouselPage>
+</TabbedPage>
