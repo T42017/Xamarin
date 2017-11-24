@@ -31,9 +31,7 @@ namespace Enigma
 
         public ConnectPage()
         {
-            InitializeComponent();
-
-            
+            InitializeComponent();  
         }
 
         async void BluetoothConnecting()
@@ -54,7 +52,6 @@ namespace Enigma
 
         private void Continue(object sender, EventArgs e)
         {
-
 
         }
 

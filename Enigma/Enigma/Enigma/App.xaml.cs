@@ -18,16 +18,14 @@ namespace Enigma
             InitializeComponent();
 
             MainPage = new MainPage();
+            
 
-
-           
-            // ...
-            // NOTE: use for debugging, not in released app code!
             var assembly = typeof(AppResource).GetTypeInfo().Assembly; // "EmbeddedImages" should be a class in your app
             foreach (var res in assembly.GetManifestResourceNames())
             {
                 System.Diagnostics.Debug.WriteLine("found resource: " + res);
             }
+
             //AppResource.Culture = new CultureInfo("en-GB");
             //IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
             //var device = manager.Connect();
@@ -36,6 +34,7 @@ namespace Enigma
             //    Id = 1,
             //    Value = 0
             //});
+
             //device.Write(buffer, 0, buffer.Length);
 
             //var hmm = device.BytesToRead;
@@ -44,7 +43,7 @@ namespace Enigma
             //{
             //    Content = new Label()
             //    {
-            //        Text = AppResourse.PowerUpsText,
+            //        Text = AppResource.PowerUpsText,
             //        HorizontalOptions = LayoutOptions.Center,
             //        VerticalOptions = LayoutOptions.Center,
             //        TextColor = Color.Red,
