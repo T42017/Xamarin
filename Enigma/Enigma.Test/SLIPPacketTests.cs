@@ -35,7 +35,7 @@ namespace Enigma.Test
             //Act
             var data = SLIPPacket.ToByteArray(p);
             //Assert
-            Assert.AreEqual(9, data.Length);
+            Assert.AreEqual(10, data.Length);
         }
 
         [TestMethod]
@@ -68,6 +68,28 @@ namespace Enigma.Test
             //Assert
             byte[] pattern = { SLIPPacket.ESC, SLIPPacket.ESC_ESC };
             Assert.IsTrue(data.IndexOfPattern(pattern) > 0);
+        }
+
+        [TestMethod]
+        public void ShouldCaclculateCrc16ForSomeData1()
+        {
+            //Arrange
+            byte[] data = { 0x12 };
+            //Act
+            var crc = SLIPPacket.CalculateCrc16(data);
+            //Assert
+            Assert.AreEqual(0xD383, crc);
+        }
+
+        [TestMethod]
+        public void ShouldCaclculateCrc16ForSomeData2()
+        {
+            //Arrange
+            byte[] data = { 0x34, 0x12, 0x56, 0x78, 0x90, 0xFF };
+            //Act
+            var crc = SLIPPacket.CalculateCrc16(data);
+            //Assert
+            Assert.AreEqual(0x42F4, crc);
         }
 
     }

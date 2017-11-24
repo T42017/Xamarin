@@ -17,7 +17,7 @@ namespace Enigma.Model
          * Packet is    
          *              LENGTH  1 byte (pre escaped, always 6 for now)
          *              PAYLOAD 6 byte (default 
-         *              CRC     1 byte
+         *              CRC-16  2 byte
          *              END     1 byte
          * */
 
@@ -27,7 +27,10 @@ namespace Enigma.Model
             data.Add(6);
             var payload = parameter.ToByteArray();
             data.AddRange(payload);
-            data.Add(CalculateCrc(payload));
+
+            var crc = CalculateCrc16(payload);
+            data.Add((byte)(crc >> 8));
+            data.Add((byte)(crc & 0xFF));
 
             //Byte stuffing
             for (int i = 1; i < data.Count; i++)
@@ -50,17 +53,19 @@ namespace Enigma.Model
             throw new NotImplementedException();
         }
 
-
-        private static byte CalculateCrc(byte[] data)
+        public static UInt16 CalculateCrc16(byte[] data)
         {
-            // start with length
-            byte crc = 6; 
+            UInt16 crc = UInt16.MaxValue;
+            byte x = 0;
 
-            foreach (var b in data)
-                crc += b;
+            foreach (var d in data)
+            {
+                x = (byte)((crc >> 8) ^ d);
+                x ^= (byte)(x >> 4);
+                crc = (UInt16)((crc << 8) ^ ((UInt16)(x << 12)) ^ ((UInt16)(x << 5)) ^ x);
+            }
 
-            // 2-komplement
-            return (byte)(0xFF - crc + 1);
+            return crc;
         }
     }
 }

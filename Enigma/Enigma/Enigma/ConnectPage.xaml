@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Enigma.ConnectPage"
+             x:Name="StartPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout BackgroundColor="#FFFFFF">
+                <Image Source="ec_logo.png" Margin="0,100,0,0"/>
+                <Button Text="Connect To Device" Clicked="BluetoothConnect" Margin="60,100,60,0" BackgroundColor="#0082FB" BorderRadius="15" TextColor="White"></Button>
+                <Button Text="Continue Without Connecting" Clicked="Continue" Margin="60,100,60,0" BackgroundColor="#333333" BorderRadius="15" TextColor="White"></Button>
+
+            </StackLayout>
+
+            <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
+                <StackLayout VerticalOptions="Center" >
+                    <ActivityIndicator IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+            </ContentView>
+
+        </Grid>
+
+        
+    </ContentPage.Content>
+</ContentPage>
