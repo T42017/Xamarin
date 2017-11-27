@@ -116,6 +116,24 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Connect To Device.
+        /// </summary>
+        internal static string ConnectButton {
+            get {
+                return ResourceManager.GetString("ConnectButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue Without Connecting.
+        /// </summary>
+        internal static string ContinueNoConnectButton {
+            get {
+                return ResourceManager.GetString("ContinueNoConnectButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CW End stops.
         /// </summary>
         internal static string CWEndStopsText {

@@ -229,4 +229,12 @@
     <value>Use Start Position</value>
     <comment>Settings page text</comment>
   </data>
+  <data name="ConnectButton" xml:space="preserve">
+    <value>Connect To Device</value>
+    <comment>Start Menu Button</comment>
+  </data>
+  <data name="ContinueNoConnectButton" xml:space="preserve">
+    <value>Continue Without Connecting</value>
+    <comment>Start Menu Button</comment>
+  </data>
 </root>

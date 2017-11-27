@@ -217,4 +217,12 @@
     <value>Hastighet</value>
     <comment>Settings page text</comment>
   </data>
+  <data name="ConnectButton" xml:space="preserve">
+    <value>Anslut till en enhet</value>
+    <comment>Start Menu Button</comment>
+  </data>
+  <data name="ContinueNoConnectButton" xml:space="preserve">
+    <value>Fortsätt utan att ansluta</value>
+    <comment>Start Menu Button</comment>
+  </data>
 </root>
