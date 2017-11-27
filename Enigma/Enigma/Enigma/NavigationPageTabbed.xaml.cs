@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Enigma
 {
-    public partial class MainPage : NavigationPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class NavigationPageTabbed : TabbedPage
     {
-        public MainPage()
+        public NavigationPageTabbed ()
         {
             InitializeComponent();
         }
