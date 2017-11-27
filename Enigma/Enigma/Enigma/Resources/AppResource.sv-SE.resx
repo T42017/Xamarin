@@ -225,4 +225,28 @@
     <value>Fortsätt utan att ansluta</value>
     <comment>Start Menu Button</comment>
   </data>
+  <data name="ConnectPageText" xml:space="preserve">
+    <value>Sida för anslutningar</value>
+    <comment>Naviagation page text</comment>
+  </data>
+  <data name="DiagnosticPageText" xml:space="preserve">
+    <value>Diagnostik</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="MapText" xml:space="preserve">
+    <value>Kartor</value>
+    <comment>Nagivation page text</comment>
+  </data>
+  <data name="MotionPageText" xml:space="preserve">
+    <value>Rörelse</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="PagesText" xml:space="preserve">
+    <value>Sidor</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="SettingsPageText" xml:space="preserve">
+    <value>Inställningar</value>
+    <comment>Navigation page text</comment>
+  </data>
 </root>

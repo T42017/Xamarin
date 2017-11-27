@@ -125,6 +125,15 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Connection page.
+        /// </summary>
+        internal static string ConnectPageText {
+            get {
+                return ResourceManager.GetString("ConnectPageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Continue Without Connecting.
         /// </summary>
         internal static string ContinueNoConnectButton {
@@ -139,6 +148,15 @@ namespace Enigma.Resources {
         internal static string CWEndStopsText {
             get {
                 return ResourceManager.GetString("CWEndStopsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diagnostic.
+        /// </summary>
+        internal static string DiagnosticPageText {
+            get {
+                return ResourceManager.GetString("DiagnosticPageText", resourceCulture);
             }
         }
         
@@ -188,11 +206,38 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maps.
+        /// </summary>
+        internal static string MapText {
+            get {
+                return ResourceManager.GetString("MapText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motion.
+        /// </summary>
+        internal static string MotionPageText {
+            get {
+                return ResourceManager.GetString("MotionPageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Motion Shift.
         /// </summary>
         internal static string MotionShiftText {
             get {
                 return ResourceManager.GetString("MotionShiftText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pages.
+        /// </summary>
+        internal static string PagesText {
+            get {
+                return ResourceManager.GetString("PagesText", resourceCulture);
             }
         }
         
@@ -247,6 +292,15 @@ namespace Enigma.Resources {
         internal static string SaveButton {
             get {
                 return ResourceManager.GetString("SaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string SettingsPageText {
+            get {
+                return ResourceManager.GetString("SettingsPageText", resourceCulture);
             }
         }
         

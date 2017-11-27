@@ -15,28 +15,39 @@ namespace Enigma
 		    InitializeComponent();
 		    var map = new Map(
 		        MapSpan.FromCenterAndRadius(
-		            new Position(55.696922, 13.195254), Distance.FromMiles(1.0)))
+		            new Position(55.686047, 13.185772), Distance.FromMiles(1.0)))
 		    {
 		        IsShowingUser = true,
 		        HeightRequest = 320,
 		        WidthRequest = 200,
 		        VerticalOptions = LayoutOptions.CenterAndExpand
 		    };
-		    var position = new Position(55.696922, 13.195254);
+		    var position = new Position(55.686047, 13.185772);
 		    var pin = new Pin
 		    {
 		        Type = PinType.Place,
 		        Position = position,
-		        Label = "custom pin",
-		        Address = "custom detail info"
-		    };
-		    map.Pins.Add(pin);
-		    //var cp = new ContentPage
-		    //{
-		    //    Content = map,
-		    //};
+		        Label = "NTI-Gymnasiet",
+		        Address = "Sankt Lars väg 11, 222 70 Lund"
+            };
 
-		    this.Content = map;
+		    var position2 = new Position(55.376692, 13.145149);
+		    var pin2 = new Pin
+		    {
+		        Type = PinType.Place,
+		        Position = position2,
+		        Label = "Trelleborgen",
+		        Address = "Västra Vallgatan 6, 231 64 Trelleborg"
+            };
+
+            map.Pins.Add(pin);
+		    map.Pins.Add(pin2);
+            //var cp = new ContentPage
+            //{
+            //    Content = map,
+            //};
+
+            this.Content = map;
         }
 	}
 }

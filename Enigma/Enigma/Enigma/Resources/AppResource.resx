@@ -237,4 +237,28 @@
     <value>Continue Without Connecting</value>
     <comment>Start Menu Button</comment>
   </data>
+  <data name="ConnectPageText" xml:space="preserve">
+    <value>Connection page</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="DiagnosticPageText" xml:space="preserve">
+    <value>Diagnostic</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="MapText" xml:space="preserve">
+    <value>Maps</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="MotionPageText" xml:space="preserve">
+    <value>Motion</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="PagesText" xml:space="preserve">
+    <value>Pages</value>
+    <comment>Navigation page text</comment>
+  </data>
+  <data name="SettingsPageText" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Navigation page text</comment>
+  </data>
 </root>
