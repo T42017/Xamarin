@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin;
+using Xamarin.Forms;
 
 namespace Enigma.Droid
 {
@@ -18,7 +20,9 @@ namespace Enigma.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
+            Xamarin.FormsMaps.Init(this, bundle);
+            FormsMaps.Init(this, bundle);
+            Forms.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
