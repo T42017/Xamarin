@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Enigma.Annotations;
 using Enigma.Message;
+using Enigma.Model;
 using Xamarin.Forms;
 
 namespace Enigma
@@ -21,6 +25,8 @@ namespace Enigma
 
             StartCalibrationCommand = new Command(OnStartCalibrationCommand);
             ShowInfoCommand = new Command<string>(OnShowInfoCommand);
+
+            Parameters = LoadParameterData().ToList();
 
             _messages.Add("StartCalibrationInfo", new ShowInfoMessage("Start Calibration:", "1"));
             _messages.Add("UseStartPositionInfo", new ShowInfoMessage("Use Start Position:", "2"));
@@ -73,6 +79,19 @@ namespace Enigma
             }
         }
 
+        private IEnumerable<Parameter> _parameters;
+
+        public IEnumerable<Parameter> Parameters
+        {
+            get { return _parameters;}
+            set
+            {
+                _parameters = value;
+                OnPropertyChanged();
+            } 
+            
+        }
+
         #region PropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -83,5 +102,33 @@ namespace Enigma
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        #region Load Parameters
+
+        private IEnumerable<Parameter> LoadParameterData()
+        {
+            var assembly = typeof(SettingsView).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("Enigma.Data.Parameters.xml");
+            string text = "";
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                text = reader.ReadToEnd();
+            }
+
+            XDocument doc = XDocument.Parse(text);
+
+            IEnumerable<Parameter> parameters = from s in doc.Descendants("param")
+                                                select new Parameter
+                                                {
+                                                    Id = ushort.Parse(s.Attribute("id").Value),
+                                                    Name = s.Attribute("name").Value,
+                                                    Desc = s.Element("desc").Value
+                                                };
+
+            return parameters;
+        }
+
+        #endregion
+
     }
 }

@@ -14,7 +14,7 @@ namespace Enigma
         {
             InitializeComponent();
 
-            MainPage = new SettingsPage();
+            MainPage = new DiagnosticsPage();
 
 
 

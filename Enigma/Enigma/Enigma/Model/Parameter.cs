@@ -11,6 +11,9 @@ namespace Enigma.Model
         public UInt16 Id { get; set; }
         public UInt32 Value { get; set; }
 
+        public string Name { get; set; }
+        public string Desc { get; set; }
+
         public byte[] ToByteArray()
         {
             var data = new byte[6];
