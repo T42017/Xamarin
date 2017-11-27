@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Enigma
 {
-    public partial class MainPage : NavigationPage
+    public partial class MainPage : TabbedPage
     {
         public MainPage()
         {
