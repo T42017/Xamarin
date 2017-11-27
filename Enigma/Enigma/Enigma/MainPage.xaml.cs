@@ -16,28 +16,7 @@ namespace Enigma
             InitializeComponent();
             setting = new SettingsPage();
         }
-        
 
 
-        public void BtnPageChangeSettings(object sender, EventArgs e)
-        {
-
-            this.CurrentPage = CurrentPage.FindByName<ContentPage>("SettingsPage");
-        }
-
-        private void BtnChangePageRotera(object sender, EventArgs e)
-        {
-            this.CurrentPage = CurrentPage.FindByName<ContentPage>("RotationPage");
-        }
-
-        private void BtnPageChangeDiagnostic(object sender, EventArgs e)
-        {
-            this.CurrentPage = CurrentPage.FindByName<ContentPage>("DiagnosticsPage");
-        }
-
-        private void BtnPageChangeMap(object sender, EventArgs e)
-        {
-            this.CurrentPage = CurrentPage.FindByName<ContentPage>("MapsPage");
-        }
     }
 }
