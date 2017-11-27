@@ -17,7 +17,7 @@ namespace Enigma
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MapPage();
             
 
             var assembly = typeof(AppResource).GetTypeInfo().Assembly; // "EmbeddedImages" should be a class in your app
