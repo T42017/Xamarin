@@ -18,9 +18,9 @@ namespace Enigma
 		            new Position(55.696922, 13.195254), Distance.FromMiles(1.0)))
 		    {
 		        IsShowingUser = true,
-		        HeightRequest = 50,
-		        WidthRequest = 50,
-		        VerticalOptions = LayoutOptions.FillAndExpand
+		        HeightRequest = 320,
+		        WidthRequest = 200,
+		        VerticalOptions = LayoutOptions.CenterAndExpand
 		    };
 		    var position = new Position(55.696922, 13.195254);
 		    var pin = new Pin
