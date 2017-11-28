@@ -316,9 +316,9 @@ namespace Enigma.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Stop_Mode.Mech:.
         /// </summary>
-        internal static string StopModeMech {
+        internal static string StopModeMechText {
             get {
-                return ResourceManager.GetString("StopModeMech", resourceCulture);
+                return ResourceManager.GetString("StopModeMechText", resourceCulture);
             }
         }
         

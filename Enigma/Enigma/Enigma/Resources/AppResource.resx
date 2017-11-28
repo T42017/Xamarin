@@ -197,7 +197,7 @@
     <value>Start Position:</value>
     <comment>Settings page text</comment>
   </data>
-  <data name="StopModeMech" xml:space="preserve">
+  <data name="StopModeMechText" xml:space="preserve">
     <value>Stop_Mode.Mech:</value>
     <comment>Settings page text</comment>
   </data>

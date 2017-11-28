@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.Enigma" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
-  <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />	<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -9,7 +10,7 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="Enigma.Android">
-	  <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBew5qeoUfdnLTX9BRoK4ZSFfxi_bfDweU" />  
-  </application>
+	<application android:label="Enigma.Android" android:icon="@drawable/ec_logo">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBew5qeoUfdnLTX9BRoK4ZSFfxi_bfDweU" />
+	</application>
 </manifest>
