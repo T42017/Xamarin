@@ -198,6 +198,10 @@
   <ItemGroup>
     <Content Include="obj\Debug\Enigma.Android.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\resolved_inspector_assemblies.txt" />
+    <AndroidResource Include="Resources\drawable\circle.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\actuator.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\actuator.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\actuator.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />

@@ -6,7 +6,7 @@
             xmlns:views="clr-namespace:Enigma.Views;assembly=Enigma"
             x:Class="Enigma.NavigationPageTabbed">
 
-    <ContentPage Title="{local:Translate MotionPageText}" />
+    <local:MotionPage Title="{local:Translate MotionPageText}" />
     <views:SettingsPage Title="{local:Translate SettingsPageText}" />
     <views:DiagnosticsPage Title="{local:Translate DiagnosticPageText}" />
     <local:MapPage Title="{local:Translate MapText}" />

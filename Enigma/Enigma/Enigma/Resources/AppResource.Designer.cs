@@ -62,11 +62,11 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Acuator ID.
+        ///   Looks up a localized string similar to Actuator ID.
         /// </summary>
-        internal static string AcuatorIDText {
+        internal static string ActuatorIDText {
             get {
-                return ResourceManager.GetString("AcuatorIDText", resourceCulture);
+                return ResourceManager.GetString("ActuatorIDText", resourceCulture);
             }
         }
         
@@ -94,15 +94,6 @@ namespace Enigma.Resources {
         internal static string AutoCalibrateButton {
             get {
                 return ResourceManager.GetString("AutoCalibrateButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Auto Calibrate.
-        /// </summary>
-        internal static string AutoCalibrateButton1 {
-            get {
-                return ResourceManager.GetString("AutoCalibrateButton1", resourceCulture);
             }
         }
         

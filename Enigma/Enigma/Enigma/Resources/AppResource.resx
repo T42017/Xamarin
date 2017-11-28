@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AcuatorIDText" xml:space="preserve">
-    <value>Acuator ID</value>
+  <data name="ActuatorIDText" xml:space="preserve">
+    <value>Actuator ID</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="AddNotesButton" xml:space="preserve">
@@ -130,10 +130,6 @@
     <comment>Diagnostic page button</comment>
   </data>
   <data name="AutoCalibrateButton" xml:space="preserve">
-    <value>Auto Calibrate</value>
-    <comment>Motion page button</comment>
-  </data>
-  <data name="AutoCalibrateButton1" xml:space="preserve">
     <value>Auto Calibrate</value>
     <comment>Motion page button</comment>
   </data>

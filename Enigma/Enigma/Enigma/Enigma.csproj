@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Actuator.xaml.cs">
+      <DependentUpon>Actuator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -55,6 +58,9 @@
     <Compile Include="Messages\ShowInfoMessage.cs" />
     <Compile Include="Model\SLIPPacket.cs" />
     <Compile Include="Model\Parameter.cs" />
+    <Compile Include="MotionPage.xaml.cs">
+      <DependentUpon>MotionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NavigationPageTabbed.xaml.cs">
       <DependentUpon>NavigationPageTabbed.xaml</DependentUpon>
     </Compile>
@@ -134,13 +140,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Actuator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Views\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\Parameters.xml" />
+    <EmbeddedResource Include="MotionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+      <EmbeddedResource Include="Data\Parameters.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DiagnosticsPage.xaml">
