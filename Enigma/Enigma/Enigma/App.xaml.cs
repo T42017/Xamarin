@@ -14,7 +14,7 @@ namespace Enigma
         {
             InitializeComponent();
 
-            MainPage = new Enigma.MainPage();
+            MainPage = new Enigma.MotionPage();
 
             IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
             var device = manager.Connect();

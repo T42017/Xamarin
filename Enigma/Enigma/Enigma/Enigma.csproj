@@ -50,6 +50,9 @@
     </Compile>
     <Compile Include="Model\SLIPPacket.cs" />
     <Compile Include="Model\Parameter.cs" />
+    <Compile Include="MotionPage.xaml.cs">
+      <DependentUpon>MotionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Actuator.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MotionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
