@@ -40,3 +40,5 @@ Generated_Code/
 *.xap
 asteroids/Asteroids_del5/Asteroids_del5/Asteroids_del5/Asteroids_del5.csproj.Debug.cachefile
 *.orig
+/Enigma/Enigma/Enigma.UWP/Enigma.UWP.nuget.props
+/Enigma/Enigma/Enigma.UWP/project.lock.json
