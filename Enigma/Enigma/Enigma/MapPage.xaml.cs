@@ -15,7 +15,8 @@ namespace Enigma
 		    InitializeComponent();
 		    var map = new Map()
 		    {
-		        IsShowingUser = true,
+                MyLocationEnabled = true,
+                		        
 		        HeightRequest = 320,
 		        WidthRequest = 200,
 		        VerticalOptions = LayoutOptions.CenterAndExpand
@@ -30,11 +31,13 @@ namespace Enigma
 		        Address = "custom detail info"
 		    };
 		    map.Pins.Add(pin);
-		    //var cp = new ContentPage
-		    //{
-		    //    Content = map,
+           
+            //var cp = new ContentPage
+            //{
+            //    Content = map,
 		    //};
-
+		    var position1= new Position(56.172442, 14.860493);
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(position1, Distance.FromKilometers(150)));
 		    this.Content = map;
         }
 	}
