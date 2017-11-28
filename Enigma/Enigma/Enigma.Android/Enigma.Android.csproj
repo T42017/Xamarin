@@ -121,11 +121,11 @@
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.5.0.91635\lib\MonoAndroid10\Xamarin.Forms.Maps.dll</HintPath>
+    <Reference Include="Xamarin.Forms.GoogleMaps, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.GoogleMaps.2.2.1\lib\MonoAndroid70\Xamarin.Forms.GoogleMaps.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Maps.Android, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.5.0.91635\lib\MonoAndroid10\Xamarin.Forms.Maps.Android.dll</HintPath>
+    <Reference Include="Xamarin.Forms.GoogleMaps.Android, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.GoogleMaps.2.2.1\lib\MonoAndroid70\Xamarin.Forms.GoogleMaps.Android.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
@@ -193,8 +193,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\meme.png" />
     <Content Include="obj\Debug\Enigma.Android.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\resolved_inspector_assemblies.txt" />
+    <AndroidResource Include="Resources\drawable\meme.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
