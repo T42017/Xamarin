@@ -22296,19 +22296,19 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\jonas\\.nuget\\packages\\": {}
+    "C:\\Users\\usr\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\GIT\\T42017\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
+      "projectUniqueName": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
       "projectName": "Enigma.UWP",
-      "projectPath": "C:\\GIT\\T42017\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
-      "projectJsonPath": "C:\\GIT\\T42017\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\project.json",
-      "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT\\T42017\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\obj\\",
+      "projectPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
+      "projectJsonPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\project.json",
+      "packagesPath": "C:\\Users\\usr\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\usr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
@@ -22318,8 +22318,8 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "C:\\GIT\\T42017\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj": {
-              "projectPath": "C:\\GIT\\T42017\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj"
+            "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj": {
+              "projectPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj"
             }
           }
         }

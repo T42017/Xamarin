@@ -202,6 +202,21 @@
     <AndroidResource Include="Resources\drawable-hdpi\actuator.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\actuator.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\actuator.png" />
+    <AndroidResource Include="Resources\drawable\Bluetooth.png" />
+    <AndroidResource Include="Resources\drawable\BluetoothColor.png" />
+    <AndroidResource Include="Resources\drawable\Diagnostics.png" />
+    <AndroidResource Include="Resources\drawable\DiagnosticsColor.png" />
+    <AndroidResource Include="Resources\drawable\Maintenance.png" />
+    <AndroidResource Include="Resources\drawable\MaintenanceColor.png" />
+    <AndroidResource Include="Resources\drawable\Map.png" />
+    <AndroidResource Include="Resources\drawable\MapColor.png" />
+    <AndroidResource Include="Resources\drawable\Rotation.png" />
+    <AndroidResource Include="Resources\drawable\RotationColor.png" />
+    <AndroidResource Include="Resources\drawable\IconSelectorBluetooth.xml" />
+    <AndroidResource Include="Resources\drawable\IconSelectorMotion.xml" />
+    <AndroidResource Include="Resources\drawable\IconSelectorSettings.xml" />
+    <AndroidResource Include="Resources\drawable\IconSelectorDiagnostics.xml" />
+    <AndroidResource Include="Resources\drawable\IconSelectorMap.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />

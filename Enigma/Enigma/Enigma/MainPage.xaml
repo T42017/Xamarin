@@ -1,15 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Enigma"
-             x:Class="Enigma.MainPage">
-    
-    <local:ConnectPage>
-        
-    </local:ConnectPage>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-    <local:NavigationPageTabbed>
+<TabbedPage BarBackgroundColor="White"
 
-    </local:NavigationPageTabbed>
-    
- </TabbedPage>
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Enigma"
+            xmlns:views="clr-namespace:Enigma.Views;assembly=Enigma"
+            x:Class="Enigma.MainPage">
+
+    <local:ConnectPage Icon="IconSelectorBluetooth" />
+
+    <local:MotionPage Icon="IconSelectorMotion" />
+
+    <views:SettingsPage Icon="IconSelectorSettings" />
+
+    <views:DiagnosticsPage Icon="IconSelectorDiagnostics" />
+
+    <local:MapPage Icon="IconSelectorMap.map" />
+
+
+</TabbedPage>
