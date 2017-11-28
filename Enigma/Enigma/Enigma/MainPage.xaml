@@ -1,15 +1,59 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Enigma"
-             x:Class="Enigma.MainPage">
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<TabbedPage BarBackgroundColor="White"
+            
+    xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Enigma"
+            x:Class="Enigma.MainPage">
+
     
-    <local:ConnectPage>
-        
+    
+    <local:ConnectPage Icon="IconSelectorBluetooth" >
+        <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
+            <StackLayout VerticalOptions="Center" >
+                <ActivityIndicator Color="#3498db" IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ContentView>
     </local:ConnectPage>
 
-    <local:NavigationPageTabbed>
+    <ContentPage Icon="IconSelectorRotation" >
+        <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
+            <StackLayout VerticalOptions="Center" >
+                <ActivityIndicator Color="#3498db" IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ContentView>
+    </ContentPage>
 
-    </local:NavigationPageTabbed>
+    <ContentPage Icon="IconSelectorMaintenance" >
+        <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
+            <StackLayout VerticalOptions="Center" >
+                <ActivityIndicator Color="#3498db" IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ContentView>
+    </ContentPage>
+
+    <ContentPage Icon="IconSelectorDiagnostics" >
+        <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
+            <StackLayout VerticalOptions="Center" >
+                <ActivityIndicator Color="#3498db" IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ContentView>
+    </ContentPage>
+
+    <local:MapPage Icon="IconSelectorMap.map" >
+        <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
+            <StackLayout VerticalOptions="Center" >
+                <ActivityIndicator Color="#3498db" IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ContentView>
+    </local:MapPage>
+
+</TabbedPage>
     
- </TabbedPage>
+    

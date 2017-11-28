@@ -198,6 +198,31 @@
   <ItemGroup>
     <Content Include="obj\Debug\Enigma.Android.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\resolved_inspector_assemblies.txt" />
+    <AndroidResource Include="Resources\drawable\IconSelectorMap.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\IconSelectorBluetooth.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\IconSelectorRotation.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\IconSelectorMaintenance.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\IconSelectorDiagnostics.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\BluetoothColor.png" />
+    <AndroidResource Include="Resources\drawable\DiagnosticsColor.png" />
+    <AndroidResource Include="Resources\drawable\MaintenanceColor.png" />
+    <AndroidResource Include="Resources\drawable\MapColor.png" />
+    <AndroidResource Include="Resources\drawable\Bluetooth.png" />
+    <AndroidResource Include="Resources\drawable\Diagnostics.png" />
+    <AndroidResource Include="Resources\drawable\Maintenance.png" />
+    <AndroidResource Include="Resources\drawable\Map.png" />
+    <AndroidResource Include="Resources\drawable\Rotation.png" />
+    <AndroidResource Include="Resources\drawable\RotationColor.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />

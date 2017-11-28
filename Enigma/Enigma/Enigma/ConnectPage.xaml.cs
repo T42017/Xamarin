@@ -48,12 +48,7 @@ namespace Enigma
                     this.IsBusy = false;
                 }
             }
-        }
-
-        private void Continue(object sender, EventArgs e)
-        {
-
-        }
+        }      
 
         public void BluetoothManage()
         {
