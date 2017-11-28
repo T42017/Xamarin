@@ -62,7 +62,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Actuator ID.
+        ///   Looks up a localized string similar to Actuator ID:.
         /// </summary>
         internal static string ActuatorIDText {
             get {
@@ -98,7 +98,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CCW End stops.
+        ///   Looks up a localized string similar to CCW End stops:.
         /// </summary>
         internal static string CCWEndStopsText {
             get {
@@ -134,7 +134,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CW End stops.
+        ///   Looks up a localized string similar to CW End stops:.
         /// </summary>
         internal static string CWEndStopsText {
             get {
@@ -152,7 +152,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Factory Settings ID.
+        ///   Looks up a localized string similar to Factory Settings ID:.
         /// </summary>
         internal static string FactorySettingsIDText {
             get {
@@ -161,7 +161,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to First Error Position.
+        ///   Looks up a localized string similar to First Error Position:.
         /// </summary>
         internal static string FirstErrorPositionText {
             get {
@@ -179,16 +179,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Load Settings.
-        /// </summary>
-        internal static string LoadSettingsButton1 {
-            get {
-                return ResourceManager.GetString("LoadSettingsButton1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Manufacturing Date.
+        ///   Looks up a localized string similar to Manufacturing Date:.
         /// </summary>
         internal static string ManufacturingDateText {
             get {
@@ -215,7 +206,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Motion Shift.
+        ///   Looks up a localized string similar to Motion Shift:.
         /// </summary>
         internal static string MotionShiftText {
             get {
@@ -233,7 +224,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Positive Direction.
+        ///   Looks up a localized string similar to Positive Direction:.
         /// </summary>
         internal static string PositiveDirectionText {
             get {
@@ -242,7 +233,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Power ups.
+        ///   Looks up a localized string similar to Power ups:.
         /// </summary>
         internal static string PowerUpsText {
             get {
@@ -251,7 +242,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Power Up Wait Time.
+        ///   Looks up a localized string similar to Power Up Wait Time:.
         /// </summary>
         internal static string PowerUpWaitTimeText {
             get {
@@ -265,15 +256,6 @@ namespace Enigma.Resources {
         internal static string ResetAllButton {
             get {
                 return ResourceManager.GetString("ResetAllButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reset All.
-        /// </summary>
-        internal static string ResetAllButton1 {
-            get {
-                return ResourceManager.GetString("ResetAllButton1", resourceCulture);
             }
         }
         
@@ -296,7 +278,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Speed.
+        ///   Looks up a localized string similar to Speed:.
         /// </summary>
         internal static string SpeedText {
             get {
@@ -314,7 +296,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Calibration.
+        ///   Looks up a localized string similar to Start Calibration:.
         /// </summary>
         internal static string StartCalibrationText {
             get {
@@ -323,7 +305,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Position.
+        ///   Looks up a localized string similar to Start Position:.
         /// </summary>
         internal static string StartPositionText {
             get {
@@ -332,7 +314,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stop_Mode.Mech..
+        ///   Looks up a localized string similar to Stop_Mode.Mech:.
         /// </summary>
         internal static string StopModeMech {
             get {
@@ -341,7 +323,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stroke Lengt.
+        ///   Looks up a localized string similar to Stroke Length:.
         /// </summary>
         internal static string StrokeLengthText {
             get {
@@ -350,7 +332,16 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total Running.
+        ///   Looks up a localized string similar to SW Version:.
+        /// </summary>
+        internal static string SWVersionText {
+            get {
+                return ResourceManager.GetString("SWVersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Running:.
         /// </summary>
         internal static string TotalRunningText {
             get {
@@ -359,7 +350,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total Running Time.
+        ///   Looks up a localized string similar to Total Running Time:.
         /// </summary>
         internal static string TotalRunningTimeText {
             get {
@@ -368,7 +359,7 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use Start Position.
+        ///   Looks up a localized string similar to Use Start Position:.
         /// </summary>
         internal static string UseStartPositionText {
             get {

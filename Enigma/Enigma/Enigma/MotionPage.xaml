@@ -9,7 +9,7 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <local:Actuator ActuatorRotation="180"></local:Actuator>
+            <local:Actuator ActuatorRotation="90"></local:Actuator>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

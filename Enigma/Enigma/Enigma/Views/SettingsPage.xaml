@@ -37,7 +37,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Button Grid.Row="0" Grid.Column="0" x:Name="StartCalibrationBtn" ClassId="StartCalibrationInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference StartCalibrationBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="0" Grid.Column="1" ClassId="StartCalibrationEvent" FontSize="10" Text="{Binding CalibrationStatus, StringFormat='Start Calibration: {0}'}" Command="{Binding  StartCalibrationCommand}"/>
+                    <Button Grid.Row="0" Grid.Column="1" ClassId="StartCalibrationEvent" FontSize="10" Text="{Binding CalibrationStatus, StringFormat='{0}'}" Command="{Binding  StartCalibrationCommand}"/>
 
                     <Button Grid.Row="1" Grid.Column="0" x:Name="UseStartPositionBtn" ClassId="UseStartPositionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference UseStartPositionBtn}, Path=ClassId}"/>
                     <Button Grid.Row="1" Grid.Column="1" ClassId="UseStartPositionEvent" FontSize="10" Text="Use Start Position: "/>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ActuatorIDText" xml:space="preserve">
-    <value>Ställdons ID</value>
+    <value>Ställdons ID:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="AddNotesButton" xml:space="preserve">
@@ -134,19 +134,19 @@
     <comment>Motion page button</comment>
   </data>
   <data name="StopModeMech" xml:space="preserve">
-    <value />
+    <value>Stop_Mode.Mech:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="StartPositionText" xml:space="preserve">
-    <value>Startposition</value>
+    <value>Startposition:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="FactorySettingsIDText" xml:space="preserve">
-    <value>Fabriskinställnings ID</value>
+    <value>Fabriskinställnings ID:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="UseStartPositionText" xml:space="preserve">
-    <value>Använd startposition</value>
+    <value>Använd startposition:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="LoadSettingsButton" xml:space="preserve">
@@ -154,11 +154,11 @@
     <comment>Settings page button</comment>
   </data>
   <data name="ManufacturingDateText" xml:space="preserve">
-    <value>Tillverkningsdatum</value>
+    <value>Tillverkningsdatum:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="PowerUpsText" xml:space="preserve">
-    <value>Antal uppstarter</value>
+    <value>Antal uppstarter:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="ResetAllButton" xml:space="preserve">
@@ -166,7 +166,7 @@
     <comment>Settings page button</comment>
   </data>
   <data name="CWEndStopsText" xml:space="preserve">
-    <value />
+    <value>Antal stopp medurs:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="SaveButton" xml:space="preserve">
@@ -174,15 +174,15 @@
     <comment>Diagnostic page button</comment>
   </data>
   <data name="StartCalibrationText" xml:space="preserve">
-    <value>Starta kalibrering</value>
+    <value>Starta kalibrering:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="FirstErrorPositionText" xml:space="preserve">
-    <value>Första felande position</value>
+    <value>Första felande position:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="CCWEndStopsText" xml:space="preserve">
-    <value />
+    <value>Antal stopp moturs:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="StandardSettingsButton" xml:space="preserve">
@@ -190,31 +190,31 @@
     <comment>Diagnostic page button</comment>
   </data>
   <data name="StrokeLengthText" xml:space="preserve">
-    <value />
+    <value>Stroke Length:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="TotalRunningText" xml:space="preserve">
-    <value>Total körning</value>
+    <value>Total körning:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="TotalRunningTimeText" xml:space="preserve">
-    <value>Total körtid</value>
+    <value>Total körtid:</value>
     <comment>Diagnostic page text</comment>
   </data>
   <data name="MotionShiftText" xml:space="preserve">
-    <value>Rörelseförskjutning</value>
+    <value>Rörelseförskjutning:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="PositiveDirectionText" xml:space="preserve">
-    <value>Positiv riktning</value>
+    <value>Positiv riktning:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="PowerUpWaitTimeText" xml:space="preserve">
-    <value>Uppstartstid</value>
+    <value>Uppstartstid:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="SpeedText" xml:space="preserve">
-    <value>Hastighet</value>
+    <value>Hastighet:</value>
     <comment>Settings page text</comment>
   </data>
   <data name="ConnectButton" xml:space="preserve">
@@ -248,5 +248,9 @@
   <data name="SettingsPageText" xml:space="preserve">
     <value>Inställningar</value>
     <comment>Navigation page text</comment>
+  </data>
+  <data name="SWVersionText" xml:space="preserve">
+    <value>SW version:</value>
+    <comment>Diagnostic page text</comment>
   </data>
 </root>
