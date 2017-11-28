@@ -1,27 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:enigma="clr-namespace:Enigma;assembly=Enigma"
-             x:Class="Enigma.ConnectPage"
-             x:Name="StartPage">
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:enigma="clr-namespace:Enigma;assembly=Enigma"
+    x:Class="Enigma.ConnectPage"
+    x:Name="StartPage">
 
     <ContentPage.Content>
         <Grid>
             <StackLayout>
-                <Image Source="ec_logo.png" Margin="0,100,0,0"/>
-                <Button Text="{enigma:Translate ConnectButton}" Clicked="BluetoothConnect" HorizontalOptions="Center" VerticalOptions="Center"  BackgroundColor="#3498db" BorderRadius="15" TextColor="White"></Button>
+                <Image Source="ec_logo.png" Margin="0,100,0,0" />
+                <Button Text="{enigma:Translate ConnectButton}" Clicked="BluetoothConnect" HorizontalOptions="Center"
+                        VerticalOptions="Center" BackgroundColor="#3498db" BorderRadius="15" TextColor="White"
+                        Margin="0,100,0,0" />
             </StackLayout>
 
             <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
-                <StackLayout VerticalOptions="Center" >
-                    <ActivityIndicator Color="#3498db" IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}" HorizontalOptions="FillAndExpand"
-                                       VerticalOptions="FillAndExpand"/>
+                <StackLayout VerticalOptions="Center">
+                    <ActivityIndicator Color="#3498db"
+                                       IsRunning="{Binding Source={x:Reference StartPage}, Path=IsBusy}"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </ContentView>
 
         </Grid>
 
-        
+
     </ContentPage.Content>
 </ContentPage>
