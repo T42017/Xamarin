@@ -20,8 +20,8 @@ namespace Enigma.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            Xamarin.FormsMaps.Init(this, bundle);
-            FormsMaps.Init(this, bundle);
+            Xamarin.FormsGoogleMaps.Init(this, bundle);
+            FormsGoogleMaps.Init(this, bundle);
             Forms.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
