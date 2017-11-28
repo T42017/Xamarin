@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<parameters>
+  <param id="1" name="name1" type="toggle">
+    <desc>test1</desc>
+  </param>
+  <param id="2" name="name2" type="toggle">
+    <desc>test2</desc>
+  </param>
+  <param id="3" name="name3" type="toggle">
+    <desc>test3</desc>
+  </param>
+</parameters>

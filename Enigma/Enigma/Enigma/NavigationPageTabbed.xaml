@@ -3,10 +3,11 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:local="clr-namespace:Enigma"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Enigma.NavigationPageTabbed">
+            xmlns:views="clr-namespace:Enigma.Views;assembly=Enigma"
+            x:Class="Enigma.NavigationPageTabbed">
 
     <ContentPage Title="{local:Translate MotionPageText}" />
-    <ContentPage Title="{local:Translate SettingsPageText}" />
-    <ContentPage Title="{local:Translate DiagnosticPageText}" />
+    <views:SettingsPage Title="{local:Translate SettingsPageText}" />
+    <views:DiagnosticsPage Title="{local:Translate DiagnosticPageText}" />
     <local:MapPage Title="{local:Translate MapText}" />
 </TabbedPage>
