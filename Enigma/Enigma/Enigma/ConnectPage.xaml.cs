@@ -14,6 +14,9 @@ namespace Enigma
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConnectPage : ContentPage
     {
+
+        bool hasHardwareKeys = DependencyService.Get<App.IHasHardwareKeys>().GetHasHardwareKeys();
+
         private bool busy = false;
 
         public bool IsBusy
