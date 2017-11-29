@@ -1,14 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataTemplateSelectors="clr-namespace:Enigma.DataTemplateSelectors;assembly=Enigma"
              x:Class="Enigma.App">
 	<Application.Resources>
         <ResourceDictionary>
-            <DataTemplate x:Name="CustomTemplate" x:Key="CustomTemplate">
+            
+            <DataTemplate x:Name="BoolTemplate" x:Key="BoolTemplate">
                 <Grid>
-                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="?"/>
+                    <Label Grid.Column="1" Text="{Binding Bool}"/>
                 </Grid>
             </DataTemplate>
+            
+            <DataTemplate x:Name="Int32Template" x:Key="Int32Template">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="?" />
+                    <Label Grid.Column="1" Text="{Binding Int32}"/>
+                </Grid>
+                
+                
+            </DataTemplate>
+            <dataTemplateSelectors:TemplateSelector x:Key="TemplateSelector" 
+                                                    BoolDataTemplate="{StaticResource BoolTemplate}"
+                                                    Int32DataTemplate="{StaticResource Int32Template}"/>
         </ResourceDictionary>
 		
 

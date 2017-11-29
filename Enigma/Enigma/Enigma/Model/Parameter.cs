@@ -13,6 +13,18 @@ namespace Enigma.Model
 
         public string Name { get; set; }
         public string Desc { get; set; }
+        public enum ParameterType
+        {
+            Integer16,
+            Integer32,
+            String,
+            Float,
+            Bool,
+            Select,
+
+        }
+
+        public ParameterType Type { get; set; }
 
         public byte[] ToByteArray()
         {
