@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Enigma.App">
 	<Application.Resources>
-
-		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <DataTemplate x:Name="CustomTemplate" x:Key="CustomTemplate">
+                <Grid>
+                    
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+		
 
 	</Application.Resources>
 </Application>

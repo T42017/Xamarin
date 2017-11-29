@@ -25,31 +25,7 @@ namespace Enigma
             {
                 System.Diagnostics.Debug.WriteLine("found resource: " + res);
             }
-
-            //AppResource.Culture = new CultureInfo("en-GB");
-            //IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
-            //var device = manager.Connect();
-            //var buffer = SLIPPacket.ToByteArray(new Parameter()
-            //{
-            //    Id = 1,
-            //    Value = 0
-            //});
-
-            //device.Write(buffer, 0, buffer.Length);
-
-            //var hmm = device.BytesToRead;
-
-            //MainPage = new ContentPage()
-            //{
-            //    Content = new Label()
-            //    {
-            //        Text = AppResource.PowerUpsText,
-            //        HorizontalOptions = LayoutOptions.Center,
-            //        VerticalOptions = LayoutOptions.Center,
-            //        TextColor = Color.Red,
-            //        FontSize = 22
-            //    }
-            //};
+         
         }
 
         protected override void OnStart()
