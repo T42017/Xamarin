@@ -21,21 +21,19 @@ namespace Enigma
 		        WidthRequest = 200,
 		        VerticalOptions = LayoutOptions.CenterAndExpand
 		    };
+            
 		    var position = new Position(55.696922, 13.195254);
 		    var pin = new Pin()
 		    {
+                
 		        Type = PinType.Place,
 		        Position = position,
                 Icon = BitmapDescriptorFactory.FromBundle("meme.png"),
-		        Label = "custom pin",
+		        Label = "custom pin",               
 		        Address = "custom detail info"
 		    };
 		    map.Pins.Add(pin);
-           
-            //var cp = new ContentPage
-            //{
-            //    Content = map,
-		    //};
+		    map.UiSettings.CompassEnabled = true;
 		    var position1= new Position(56.172442, 14.860493);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(position1, Distance.FromKilometers(150)));
 		    this.Content = map;
