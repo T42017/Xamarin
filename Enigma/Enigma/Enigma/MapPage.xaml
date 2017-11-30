@@ -8,7 +8,7 @@
         <googleMaps:Map WidthRequest="240" HeightRequest="120"
                   x:Class="Enigma.MapPage"   
                   x:Name="MyMap"         
-                  InitialCameraUpdate="56.2 , 14.9, 8, 30 ,0"
+               
                   IsShowingUser="true"
                   MapType="Street"                   
         />
