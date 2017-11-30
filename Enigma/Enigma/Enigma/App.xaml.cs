@@ -13,11 +13,6 @@ namespace Enigma
 {
     public partial class App : Application
     {
-        public interface IHasHardwareKeys
-        {
-            bool GetHasHardwareKeys();
-        }
-
         public App()
         {
             InitializeComponent();

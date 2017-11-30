@@ -25,6 +25,15 @@ namespace Enigma.Droid
             Forms.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+
+            var uiOptions = SystemUiFlags.HideNavigation |
+                            SystemUiFlags.LayoutHideNavigation |
+                            SystemUiFlags.LayoutFullscreen |
+                            SystemUiFlags.Fullscreen |
+                            SystemUiFlags.LayoutStable |
+                            SystemUiFlags.ImmersiveSticky;
+            Window.DecorView.SystemUiVisibility = (StatusBarVisibility)uiOptions;
+
         }
     }
 }
