@@ -1,39 +1,117 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataTemplateSelectors="clr-namespace:Enigma.DataTemplateSelectors;assembly=Enigma"
              x:Class="Enigma.App">
-	<Application.Resources>
+    <Application.Resources>
         <ResourceDictionary>
-            
-            <DataTemplate x:Name="BoolTemplate" x:Key="BoolTemplate">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Text="?"/>
-                    <Label Grid.Column="1" Text="{Binding Bool}"/>
-                </Grid>
-            </DataTemplate>
-            
-            <DataTemplate x:Name="Int32Template" x:Key="Int32Template">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Text="?" />
-                    <Label Grid.Column="1" Text="{Binding Int32}"/>
-                </Grid>
-                
-                
-            </DataTemplate>
-            <dataTemplateSelectors:TemplateSelector x:Key="TemplateSelector" 
-                                                    BoolDataTemplate="{StaticResource BoolTemplate}"
-                                                    Int32DataTemplate="{StaticResource Int32Template}"/>
-        </ResourceDictionary>
-		
 
-	</Application.Resources>
+            <DataTemplate x:Key="BoolTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"></Button>
+                        <Label Grid.Column="1" Text="{Binding Desc}" />
+                        <Button Grid.Column="2" Text="ON/OFF"></Button>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Int32Template">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"></Button>
+                        <Label Grid.Column="1" Text="{Binding Desc}" />
+                        <Button Grid.Column="2" Text="Input int32"></Button>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+            
+            <DataTemplate x:Key="Int16Template">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"></Button>
+                            <Label Grid.Column="1" Text="{Binding Desc}" />
+                        <Button Grid.Column="2" Text="Input int16"></Button>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="FloatTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"></Button>
+                        <Label Grid.Column="1" Text="{Binding Desc}" />
+                        <Button Grid.Column="2" Text="Input float"></Button>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="StringTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"></Button>
+                        <Label Grid.Column="1" Text="{Binding Desc}" />
+                        <Button Grid.Column="2" Text="Input string"></Button>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="SelectTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"></Button>
+                        <Label Grid.Column="1" Text="{Binding Desc}" />
+                        <Button Grid.Column="2" Text="Dropdown"></Button>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <dataTemplateSelectors:TemplateSelector x:Key="TemplateSelector"
+                                                    BoolDataTemplate="{StaticResource BoolTemplate}"
+                                                    Int32DataTemplate="{StaticResource Int32Template}"
+                                                    Int16DataTemplate="{StaticResource Int16Template}"
+                                                    FloatDataTemplate="{StaticResource FloatTemplate}"
+                                                    StringDataTemplate="{StaticResource StringTemplate}"
+                                                    SelectDataTemplate="{StaticResource SelectTemplate}"/>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
 </Application>

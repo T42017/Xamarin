@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -108,7 +109,8 @@ namespace Enigma
                                                 {
                                                     Id = ushort.Parse(s.Attribute("id").Value),
                                                     Name = s.Attribute("name").Value,
-                                                    Desc = s.Element("desc").Value
+                                                    Desc = s.Element("desc").Value,
+                                                    Type = s.Attribute("type").Value,
                                                 };
 
             return parameters;

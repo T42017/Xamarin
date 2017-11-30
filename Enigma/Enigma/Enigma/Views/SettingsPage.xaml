@@ -1,27 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:enigma="clr-namespace:Enigma;assembly=Enigma"
              x:Class="Enigma.Views.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView>
-                
-                <ListView ItemsSource="{Binding Parameters}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout>
-                                        <Label Text="{Binding Desc}" />
-                                        <Label Text="{Binding Name}" />
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
-                            </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <Grid ColumnSpacing="0" RowSpacing="0">
+            <!--<ScrollView>-->
+
+                <ListView ItemsSource="{Binding Parameters}" ItemTemplate="{StaticResource TemplateSelector}" SeparatorColor="Black" />
+                <!--<Grid ColumnSpacing="0" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*" />
                         <RowDefinition Height="2*" />
@@ -60,10 +48,10 @@
 
                     <Button Grid.Row="7" Grid.Column="0" x:Name="PositiveDirectionBtn" ClassId="PositiveDirectionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference PositiveDirectionBtn}, Path=ClassId}"/>
                     <Button Grid.Row="7" Grid.Column="1" ClassId="PositiveDirectionEvent" FontSize="10" Text="{enigma:Translate PositiveDirectionText}"/>
-                </Grid>
-            </ScrollView>
-            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate ResetAllButton}"/>
-            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate LoadSettingsButton}"/>
+                </Grid>-->
+            <!--</ScrollView>-->
+            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate ResetAllButton}" />
+            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate LoadSettingsButton}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

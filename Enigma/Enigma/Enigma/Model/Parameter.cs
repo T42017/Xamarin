@@ -24,7 +24,7 @@ namespace Enigma.Model
 
         }
 
-        public ParameterType Type { get; set; }
+        public string Type { get; set; }
 
         public byte[] ToByteArray()
         {

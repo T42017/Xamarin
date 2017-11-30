@@ -1,13 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <parameters>
-  <param id="1" name="name1" type="toggle">
-    <desc>test1</desc>
+  <param id="1" name="Bool" type="Bool">
+    <desc>Bool</desc>
   </param>
-  <param id="2" name="name2" type="toggle">
-    <desc>test2</desc>
+  
+  <param id="2" name="Int16" type="Integer16">
+    <desc>Int16</desc>
   </param>
-  <param id="3" name="name3" type="toggle">
-    <desc>test3</desc>
+  
+  <param id="3" name="Int32" type = "Integer32">
+    <desc>Int32</desc>
   </param>
+  
+  <param id="4" name="Float" type="Float">
+    <desc>Float</desc>
+  </param>
+  
+  <param id="5" name="String" type="String">
+    <desc>String</desc>
+  </param>
+  
+  <param id="6" name="Select" type="Select">
+    <desc>Select</desc>
+  </param>
+  
 </parameters>
