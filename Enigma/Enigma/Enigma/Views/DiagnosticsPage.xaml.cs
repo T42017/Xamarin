@@ -18,6 +18,12 @@ namespace Enigma.Views
             MessagingCenter.Subscribe<DiagnosticsViewModel, ShowInfoMessage>(this, "ShowInfo", OnShowInfoMessage);
 
             BindingContext = new DiagnosticsViewModel();
+
+            var SaveBtn = new Button {  };
+            SaveBtn.Clicked += (sender, e) => {
+                DependencyService.Get<IFileManager>().SaveFile("temp.txt", input.Text);
+            };
+            
         }
 
         private void OnShowInfoMessage(DiagnosticsViewModel sender, ShowInfoMessage message)

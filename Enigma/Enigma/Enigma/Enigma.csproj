@@ -49,6 +49,7 @@
     <Compile Include="ConnectPage.xaml.cs">
       <DependentUpon>ConnectPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IFileManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -158,7 +159,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-      <EmbeddedResource Include="Data\Parameters.xml" />
+    <EmbeddedResource Include="Data\Parameters.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DiagnosticsPage.xaml">
