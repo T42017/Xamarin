@@ -1,28 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <parameters>
-  <param id="1" name="Bool" type="Bool">
-    <desc>Bool</desc>
-  </param>
+  <setParams>
+    <param id="1" name="Start Calibration" type="Bool" content ="ON">
+      <desc>Bacon ipsum dolor amet ad dolor doner shoulder adipisicing hamburger voluptate ullamco labore shank pig frankfurter aute spare ribs enim.</desc>
+    
+    </param>
   
-  <param id="2" name="Int16" type="Integer16">
-    <desc>Int16</desc>
-  </param>
+    <param id="2" name="Use Start Position" type="Bool" content ="ON">
+      <desc>Eu chuck aliqua, deserunt bacon dolore ipsum dolor reprehenderit anim.</desc>
+    </param>
   
-  <param id="3" name="Int32" type = "Integer32">
-    <desc>Int32</desc>
-  </param>
+    <param id="3" name="Start Position" type = "Float" content ="33%">
+      <desc>Ribeye labore tongue tail in pastrami shank irure drumstick laborum shankle.</desc>
+    </param>
   
-  <param id="4" name="Float" type="Float">
-    <desc>Float</desc>
-  </param>
+    <param id="4" name="STOP_MODE.Mech" type="Select" content ="stops both dir.">
+      <desc>Filet mignon ut in fugiat eiusmod, burgdoggen sirloin jerky doner. </desc>
+    </param>
   
-  <param id="5" name="String" type="String">
-    <desc>String</desc>
-  </param>
+    <param id="5" name="Power Up Wait Time" type="Float" content ="2 sec.">
+      <desc>Alcatra ad tail turducken ball tip pastrami.</desc>
+    </param>
+
+    <param id="6" name="Speed" type="Float" content ="0.7 s/">
+      <desc>Salami pork loin ad boudin, turkey tempor frankfurter cow laborum.</desc>
+    </param>
   
-  <param id="6" name="Select" type="Select">
-    <desc>Select</desc>
-  </param>
+    <param id="7" name="Motion Shift" type="Bool" content ="OFF">
+      <desc>Officia elit venison fugiat meatloaf andouille. </desc>
+    </param>
+  
+    <param id="8" name="Positive Direction" type="Select" content="CW">
+      <desc>Pork loin in dolore beef ribs culpa esse cupim irure.</desc>
+    </param>
+  </setParams>
+
+  
+  
+  <readParamsStandard>
+    <param id="1" name="Actuator ID" type="ReadOnly" content ="1">
+      <desc>Chuck meatball filet mignon, tail hamburger ham cupim t-bone sausage drumstick.</desc>
+
+    </param>
+
+    <param id="2" name="Manufacturing Date" type="ReadOnly" content ="2019-05-27">
+      <desc>Flank pork pastrami short ribs.</desc>
+    </param>
+
+    <param id="3" name="SW Verision" type="ReadOnly" content ="4.27.1">
+      <desc>Sirloin pork loin fatback, shankle biltong andouille kevin pork chop bresaola shoulder landjaeger tongue chuck short loin.</desc>
+    </param>
+    
+    <param id="4" name="Factory Settings ID" type="ReadOnly" content ="def_ver_2.03">
+      <desc>Sirloin sausage meatloaf, pork belly beef ribs andouille ground round ham hock shank.</desc>
+    </param>
+
+    <param id="5" name="Stroke Length" type="ReadOnly" content ="90,5">
+      <desc>Beef ribs sausage filet mignon kielbasa.</desc>
+    </param>
+
+    <param id="6" name="Total Running" type="ReadOnly" content ="7301 rev">
+      <desc>Pig jerky chicken, frankfurter doner chuck andouille porchetta tail ground round landjaeger tenderloin sausage.</desc>
+    </param>
+
+    <param id="7" name="Total Running Time" type="ReadOnly" content ="388 days">
+      <desc>Chuck picanha filet mignon swine short loin turducken tri-tip ground round beef.</desc>
+    </param>
+
+    <param id="8" name="Power Ups" type="ReadOnly" content ="14">
+      <desc>T-bone meatloaf pork chop picanha doner prosciutto pastrami, hamburger rump turducken tenderloin.</desc>
+    </param>
+
+    <param id="9" name="CW End Stops" type="ReadOnly" content ="725">
+      <desc>Ball tip rump pork, beef ribs jowl flank frankfurter meatloaf tri-tip tongue buffalo swine bacon venison.</desc>
+    </param>
+
+    <param id="10" name="CCW End Stops" type="ReadOnly" content ="4">
+      <desc>Jowl ham hock shank rump shoulder jerky capicola tail picanha doner ham pork loin.</desc>
+    </param>
+
+    <param id="11" name="First Error Position" type="ReadOnly" content ="-">
+      <desc>Hamburger pig meatloaf ham, kielbasa cow tri-tip.</desc>
+    </param>
+  </readParamsStandard>
   
 </parameters>

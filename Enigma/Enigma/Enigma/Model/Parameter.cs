@@ -13,6 +13,7 @@ namespace Enigma.Model
 
         public string Name { get; set; }
         public string Desc { get; set; }
+        public object Content { get; set; }
         public enum ParameterType
         {
             Integer16,
@@ -21,6 +22,7 @@ namespace Enigma.Model
             Float,
             Bool,
             Select,
+            ReadOnly
 
         }
 
@@ -44,9 +46,11 @@ namespace Enigma.Model
             if(data.Length != 6)
                 throw new Exception("Data should be exactly length 6 for packets!");
 
-            var param = new Parameter();
-            param.Id = (UInt16)((data[0] << 8) + data[1]);
-            param.Value = (UInt32)((data[2] << 24) + (data[3] << 16) + (data[4] << 8) + data[5]);
+            var param = new Parameter
+            {
+                Id = (UInt16) ((data[0] << 8) + data[1]),
+                Value = (UInt32) ((data[2] << 24) + (data[3] << 16) + (data[4] << 8) + data[5])
+            };
             return param;
         }
     }

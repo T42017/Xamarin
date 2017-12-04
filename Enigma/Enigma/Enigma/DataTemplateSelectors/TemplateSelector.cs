@@ -12,6 +12,7 @@ namespace Enigma.DataTemplateSelectors
         public DataTemplate Int32DataTemplate { get; set; }
         public DataTemplate StringDataTemplate { get; set; }
         public DataTemplate SelectDataTemplate { get; set; }
+        public DataTemplate ReadOnlyDataTemplate { get; set; }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
@@ -36,7 +37,8 @@ namespace Enigma.DataTemplateSelectors
 
                 case "Select":
                     return SelectDataTemplate;
-
+                case "ReadOnly":
+                    return ReadOnlyDataTemplate;
 
                 default:
                     throw new NotSupportedException();

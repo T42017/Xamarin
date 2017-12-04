@@ -6,58 +6,10 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-                <Grid ColumnSpacing="0" RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Button Grid.Row="0" Grid.Column="0" x:Name="ActuatorIDBtn" ClassId="ActuatorIDInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference ActuatorIDBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="0" Grid.Column="1" ClassId="ActuatorIDEvent" FontSize="10" Text="{enigma:Translate ActuatorIDText}"/>
-
-                    <Button Grid.Row="1" Grid.Column="0" x:Name="ManufacturingDateBtn" ClassId="ManufacturingDateInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference ManufacturingDateBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="1" Grid.Column="1" ClassId="ManufacturingDateEvent" FontSize="10" Text="{enigma:Translate ManufacturingDateText}"/>
-
-                    <Button Grid.Row="2" Grid.Column="0" x:Name="SWVersionBtn" ClassId="SWVersionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference SWVersionBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="2" Grid.Column="1" ClassId="SWVersionEvent" FontSize="10" Text="{enigma:Translate SWVersionText}"/>
-
-                    <Button Grid.Row="3" Grid.Column="0" x:Name="FactorySettingsIDBtn" ClassId="FactorySettingsIDInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference FactorySettingsIDBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="3" Grid.Column="1" ClassId="FactorySettingsIDEvent" FontSize="10" Text="{enigma:Translate FactorySettingsIDText} "/>
-
-                    <Button Grid.Row="4" Grid.Column="0" x:Name="StrokeLengthBtn" ClassId="StrokeLengthInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference StrokeLengthBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="4" Grid.Column="1" ClassId="StrokeLengthEvent" FontSize="10" Text="{enigma:Translate StrokeLengthText}"/>
-
-                    <Button Grid.Row="5" Grid.Column="0" x:Name="TotalRunningBtn" ClassId="TotalRunningInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference TotalRunningBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="5" Grid.Column="1" ClassId="TotalRunningEvent" FontSize="10" Text="{enigma:Translate TotalRunningText}"/>
-
-                    <Button Grid.Row="6" Grid.Column="0" x:Name="TotalRunningTimeBtn"  ClassId="TotalRunningTimeInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference TotalRunningTimeBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="6" Grid.Column="1" ClassId="TotalRunningTimeEvent" FontSize="10" Text="{enigma:Translate TotalRunningTimeText}"/>
-
-                    <Button Grid.Row="7" Grid.Column="0" x:Name="PowerUpsBtn" ClassId="PowerUpsInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference PowerUpsBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="7" Grid.Column="1" ClassId="PowerUpsEvent" FontSize="10" Text="{enigma:Translate PowerUpsText}"/>
-
-                    <Button Grid.Row="8" Grid.Column="0" x:Name="CWEndStopsBtn" ClassId="CWEndStopsInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference CWEndStopsBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="8" Grid.Column="1" ClassId="CWEndStopsEvent" FontSize="10" Text="{enigma:Translate CWEndStopsText}"/>
-
-                    <Button Grid.Row="9" Grid.Column="0" x:Name="CCWEndStopsBtn"  ClassId="CCWEndStopsInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference CCWEndStopsBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="9" Grid.Column="1" ClassId="CCWEndStopsEvent" FontSize="10" Text="{enigma:Translate CCWEndStopsText}"/>
-
-                    <Button Grid.Row="10" Grid.Column="0" x:Name="FirstErrorPositionBtn" ClassId="FirstErrorPositionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference FirstErrorPositionBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="10" Grid.Column="1" ClassId="FirstErrorPositionEvent" FontSize="10" Text="{enigma:Translate FirstErrorPostionText}"/>
-                </Grid>
+                
+                <ListView ItemsSource="{Binding Parameters}" ItemTemplate="{StaticResource TemplateSelector}"
+                          SeparatorColor="Black" />
+                
             </ScrollView>
             <Grid ColumnSpacing="0" RowSpacing="0" >
                 <Grid.ColumnDefinitions>

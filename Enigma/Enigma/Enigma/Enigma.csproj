@@ -80,6 +80,7 @@
     <Compile Include="TranslateExtension.cs" />
     <Compile Include="ViewModels\DiagnosticsViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="Views\DiagnosticsPage.xaml.cs">
       <DependentUpon>DiagnosticsPage.xaml</DependentUpon>
     </Compile>

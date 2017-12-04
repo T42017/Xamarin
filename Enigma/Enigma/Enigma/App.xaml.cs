@@ -19,6 +19,7 @@ namespace Enigma
 
             MainPage = new MainPage();
             
+            
 
             var assembly = typeof(AppResource).GetTypeInfo().Assembly; // "EmbeddedImages" should be a class in your app
             foreach (var res in assembly.GetManifestResourceNames())
