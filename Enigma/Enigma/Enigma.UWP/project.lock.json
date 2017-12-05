@@ -22300,12 +22300,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
+      "projectUniqueName": "C:\\GIT\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
       "projectName": "Enigma.UWP",
-      "projectPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
-      "projectJsonPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\project.json",
+      "projectPath": "C:\\GIT\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\Enigma.UWP.csproj",
+      "projectJsonPath": "C:\\GIT\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\project.json",
       "packagesPath": "C:\\Users\\usr\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\obj\\",
+      "outputPath": "C:\\GIT\\Xamarin\\Enigma\\Enigma\\Enigma.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\usr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22318,8 +22318,8 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj": {
-              "projectPath": "C:\\Git\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj"
+            "C:\\GIT\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj": {
+              "projectPath": "C:\\GIT\\Xamarin\\Enigma\\Enigma\\Enigma\\Enigma.csproj"
             }
           }
         }

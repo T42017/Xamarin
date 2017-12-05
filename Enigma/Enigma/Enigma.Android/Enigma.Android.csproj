@@ -217,9 +217,16 @@
     <AndroidResource Include="Resources\drawable\IconSelectorSettings.xml" />
     <AndroidResource Include="Resources\drawable\IconSelectorDiagnostics.xml" />
     <AndroidResource Include="Resources\drawable\IconSelectorMap.xml" />
+    <AndroidResource Include="Resources\drawable\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable\ESBElogo.png" />
+    <AndroidResource Include="Resources\drawable\ESBElogo25.png" />
+    <AndroidResource Include="Resources\drawable\ESBElogo33.png" />
+    <AndroidResource Include="Resources\drawable\Since.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml">
