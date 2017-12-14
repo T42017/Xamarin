@@ -28,7 +28,7 @@ namespace Enigma
                 
 		        Type = PinType.Place,
 		        Position = position,
-                Icon = BitmapDescriptorFactory.FromBundle("meme.png"),
+                Icon = BitmapDescriptorFactory.FromBundle("Mapmarker.png"),
 		        Label = "custom pin",               
 		        Address = "custom detail info"
 		    };

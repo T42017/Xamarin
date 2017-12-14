@@ -203,6 +203,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Mapmarker.png" />
     <Content Include="obj\Debug\Enigma.Android.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\resolved_inspector_assemblies.txt" />
     <AndroidResource Include="Resources\drawable\circle.png" />
