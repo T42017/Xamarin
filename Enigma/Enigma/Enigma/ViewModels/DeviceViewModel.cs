@@ -17,7 +17,6 @@ namespace Enigma.ViewModels
     {
         private IEnumerable<Parameter> _parameters;
        
-
         private DeviceViewModel()
         {
             Parameters = LoadParameterData().ToList();
@@ -58,10 +57,8 @@ namespace Enigma.ViewModels
                     Type = s.Attribute("type").Value,
                     Content = s.Attribute("content").Value
                 };
-
             return parameters;
         }
-
         #endregion
 
         #region INotifyPropertyChanged
@@ -73,7 +70,6 @@ namespace Enigma.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         #endregion
     }
 }

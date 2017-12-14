@@ -45,7 +45,6 @@ namespace Enigma
         {
             MessagingCenter.Send(this, "ShowInfo", new ShowInfoMessage(parameter.Name, parameter.Desc));
         }
-
         #endregion
 
 
@@ -58,8 +57,6 @@ namespace Enigma
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         #endregion
-
     }
 }
