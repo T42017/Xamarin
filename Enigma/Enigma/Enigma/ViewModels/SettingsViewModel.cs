@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using Enigma.Annotations;
 using Enigma.Messages;
 using Enigma.Model;
+using Enigma.ViewModels;
 using Xamarin.Forms;
 
 namespace Enigma
@@ -24,7 +25,7 @@ namespace Enigma
 
             StartCalibrationCommand = new Command(OnStartCalibrationCommand);
             ShowInfoCommand = new Command<Parameter>(OnShowInfoCommand);
-            Parameters = LoadParameterData().ToList();
+            Parameters = DeviceViewModel.Instance.Parameters;
         }
 
         public string CalibrationStatus
@@ -47,36 +48,7 @@ namespace Enigma
             }
         }
 
-        #region Load Parameters
-
-        private IEnumerable<Parameter> LoadParameterData()
-        {
-            var assembly = typeof(SettingsViewModel).GetTypeInfo().Assembly;
-            var stream = assembly.GetManifestResourceStream("Enigma.Data.Parameters.xml");
-            var text = "";
-            using (var reader = new StreamReader(stream))
-            {
-                text = reader.ReadToEnd();
-            }
-
-            var doc = XDocument.Parse(text);
-
-            var parameters = from s in doc.Descendants("setParams").Descendants("param")
-                select new Parameter
-                {
-                    Id = ushort.Parse(s.Attribute("id").Value),
-                    Name = s.Attribute("name").Value,
-                    Desc = s.Element("desc").Value,
-                    Type = s.Attribute("type").Value,
-                    Content = s.Attribute("content").Value
-                };
-
-            return parameters;
-        }
-
-        #endregion
-
-        #region Sh        wInfoCommand
+        #region ShowInfoCommand
 
         public Command ShowInfoCommand { get; set; }
 

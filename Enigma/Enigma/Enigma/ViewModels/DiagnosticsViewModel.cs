@@ -11,11 +11,12 @@ using System.Xml.Linq;
 using Enigma.Annotations;
 using Enigma.Messages;
 using Enigma.Model;
+using Enigma.ViewModels;
 using Xamarin.Forms;
 
 namespace Enigma
 {
-    class DiagnosticsViewModel : INotifyPropertyChanged
+    public class DiagnosticsViewModel : INotifyPropertyChanged
     {
         private Dictionary<string, ShowInfoMessage> _messages = new Dictionary<string, ShowInfoMessage>();
         private IEnumerable<Parameter> _parameters;
@@ -23,8 +24,7 @@ namespace Enigma
         public DiagnosticsViewModel()
         {
             ShowInfoCommand = new Command<Parameter>(OnShowInfoCommand);
-            Parameters = LoadParameterData().ToList();
-
+            Parameters = DeviceViewModel.Instance.Parameters;
         }
 
         public IEnumerable<Parameter> Parameters
@@ -36,36 +36,6 @@ namespace Enigma
                 OnPropertyChanged();
             }
         }
-
-        #region Load Parameters
-
-        private IEnumerable<Parameter> LoadParameterData()
-        {
-            var assembly = typeof(DiagnosticsViewModel).GetTypeInfo().Assembly;
-            var stream = assembly.GetManifestResourceStream("Enigma.Data.Parameters.xml");
-            var text = "";
-            using (var reader = new StreamReader(stream))
-            {
-                text = reader.ReadToEnd();
-            }
-
-            var doc = XDocument.Parse(text);
-
-            var parameters = from s in doc.Descendants("readParamsStandard").Descendants("param")
-                select new Parameter
-                {
-                    Id = ushort.Parse(s.Attribute("id").Value),
-                    Name = s.Attribute("name").Value,
-                    Desc = s.Element("desc").Value,
-                    Type = s.Attribute("type").Value,
-                    Content = s.Attribute("content").Value
-
-                };
-
-            return parameters;
-        }
-
-        #endregion
 
         #region ShowInfoCommand
 
