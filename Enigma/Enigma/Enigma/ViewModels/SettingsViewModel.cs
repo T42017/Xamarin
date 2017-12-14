@@ -56,7 +56,6 @@ namespace Enigma
         {
             MessagingCenter.Send(this, "ShowInfo", new ShowInfoMessage(parameter.Name, parameter.Desc));
         }
-
         #endregion
 
         #region StartCalibrationCommand
@@ -67,7 +66,6 @@ namespace Enigma
         }
 
         public Command StartCalibrationCommand { get; set; }
-
         #endregion
 
         #region INotifyPropertyChanged
@@ -79,7 +77,6 @@ namespace Enigma
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         #endregion
     }
 }

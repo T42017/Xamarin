@@ -23,7 +23,6 @@ namespace Enigma
             DependencyService.Get<ISaveAndLoad>().SaveText("temp.txt","Hejsan hoppsan!");
             var tmp = DependencyService.Get<ISaveAndLoad>().LoadText("temp.txt");
             
-
             var assembly = typeof(AppResource).GetTypeInfo().Assembly; // "EmbeddedImages" should be a class in your app
             foreach (var res in assembly.GetManifestResourceNames())
             {
