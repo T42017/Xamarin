@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Enigma.Messages;
+﻿using Enigma.Messages;
+using Enigma.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,13 +11,12 @@ namespace Enigma.Views
         public SettingsPage()
         {
             InitializeComponent();
-            MessagingCenter.Subscribe<SettingsView, ShowInfoMessage>(this, "ShowInfo", OnShowInfoMessage);
+            MessagingCenter.Subscribe<SettingsViewModel, ShowInfoMessage>(this, "ShowInfo", OnShowInfoMessage);
 
-            var vm = new SettingsView();
-            BindingContext = vm;
+            BindingContext = ViewModelLocator.Current.SettingsViewModel;
         }
 
-        private void OnShowInfoMessage(SettingsView sender, ShowInfoMessage message)
+        private void OnShowInfoMessage(SettingsViewModel sender, ShowInfoMessage message)
         {
             DisplayAlert(message.Title, message.Message, message.ButtonText);
         }

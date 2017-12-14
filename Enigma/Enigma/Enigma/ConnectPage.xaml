@@ -24,9 +24,6 @@
                                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </ContentView>
-
         </Grid>
-
-
     </ContentPage.Content>
 </ContentPage>

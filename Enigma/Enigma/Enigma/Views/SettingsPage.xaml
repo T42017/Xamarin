@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:enigma="clr-namespace:Enigma;assembly=Enigma"
@@ -6,64 +7,13 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-                <!--Kommer implementeras vid ett senare tillfälle
-                <ListView ItemsSource="{Binding Parameters}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout>
-                                        <Label Text="{Binding Desc}" />
-                                        <Label Text="{Binding Name}" />
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>-->
-                <Grid ColumnSpacing="0" RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                        <RowDefinition Height="2*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
 
-                    <Button Grid.Row="0" Grid.Column="0" x:Name="StartCalibrationBtn" ClassId="StartCalibrationInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference StartCalibrationBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="0" Grid.Column="1" ClassId="StartCalibrationEvent" FontSize="10" Text="{Binding CalibrationStatus, StringFormat='{0}'}" Command="{Binding  StartCalibrationCommand}"/>
-
-                    <Button Grid.Row="1" Grid.Column="0" x:Name="UseStartPositionBtn" ClassId="UseStartPositionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference UseStartPositionBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="1" Grid.Column="1" ClassId="UseStartPositionEvent" FontSize="10" Text="{enigma:Translate UseStartPositionText}"/>
-
-                    <Button Grid.Row="2" Grid.Column="0" x:Name="StartPositionBtn" ClassId="StartPositionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference StartPositionBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="2" Grid.Column="1" ClassId="StartPositionEvent" FontSize="10" Text="{enigma:Translate StartPositionText}"/>
-
-                    <Button Grid.Row="3" Grid.Column="0" x:Name="STOP_MODEMechBtn" ClassId="STOP_MODEMechInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference STOP_MODEMechBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="3" Grid.Column="1" ClassId="STOP_MODEMechEvent" FontSize="10" Text="{enigma:Translate StopModeMechText}"/>
-
-                    <Button Grid.Row="4" Grid.Column="0" x:Name="PowerUpWaitTimeBtn" ClassId="PowerUpWaitTimeInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference PowerUpWaitTimeBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="4" Grid.Column="1" ClassId="PowerUpWaitTimeEvent" FontSize="10" Text="{enigma:Translate PowerUpWaitTimeText}"/>
-
-                    <Button Grid.Row="5" Grid.Column="0" x:Name="SpeedBtn" ClassId="SpeedInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference SpeedBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="5" Grid.Column="1" ClassId="SpeedEvent" FontSize="10" Text="{enigma:Translate SpeedText}"/>
-
-                    <Button Grid.Row="6" Grid.Column="0" x:Name="MotionShiftBtn"  ClassId="MotionShiftInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference MotionShiftBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="6" Grid.Column="1" ClassId="MotionShiftEvent" FontSize="10" Text="{enigma:Translate MotionShiftText}"/>
-
-                    <Button Grid.Row="7" Grid.Column="0" x:Name="PositiveDirectionBtn" ClassId="PositiveDirectionInfo" Text="?" Command="{Binding ShowInfoCommand}" CommandParameter="{Binding Source={x:Reference PositiveDirectionBtn}, Path=ClassId}"/>
-                    <Button Grid.Row="7" Grid.Column="1" ClassId="PositiveDirectionEvent" FontSize="10" Text="{enigma:Translate PositiveDirectionText}"/>
-                </Grid>
+                <ListView ItemsSource="{Binding Parameters}" ItemTemplate="{StaticResource TemplateSelector}"
+                          SeparatorColor="Black" />
+                
             </ScrollView>
-            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate ResetAllButton}"/>
-            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate LoadSettingsButton}"/>
+            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate ResetAllButton}" />
+            <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate LoadSettingsButton}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

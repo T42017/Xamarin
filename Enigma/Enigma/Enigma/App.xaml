@@ -1,10 +1,148 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataTemplateSelectors="clr-namespace:Enigma.DataTemplateSelectors;assembly=Enigma"
+             xmlns:viewModels="clr-namespace:Enigma.ViewModels;assembly=Enigma"
              x:Class="Enigma.App">
-	<Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="BoolTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Button Grid.Column="2" Text="ON/OFF" />
 
-		<!-- Application resource dictionary -->
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
 
-	</Application.Resources>
+            <DataTemplate x:Key="Int32Template">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Button Grid.Column="2" Text="Input int32" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="Int16Template">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Button Grid.Column="2" Text="Input int16" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="FloatTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Button Grid.Column="2" Text="Input float" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="StringTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Button Grid.Column="2" Text="Input string" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="SelectTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Button Grid.Column="2" Text="Dropdown" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="ReadOnlyTemplate">
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1.5*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="?"
+                                Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
+                                CommandParameter="{Binding}" />
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="2" Text="{Binding Content}" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+            <dataTemplateSelectors:TemplateSelector x:Key="TemplateSelector"
+                                                    BoolDataTemplate="{StaticResource BoolTemplate}"
+                                                    Int32DataTemplate="{StaticResource Int32Template}"
+                                                    Int16DataTemplate="{StaticResource Int16Template}"
+                                                    FloatDataTemplate="{StaticResource FloatTemplate}"
+                                                    StringDataTemplate="{StaticResource StringTemplate}"
+                                                    SelectDataTemplate="{StaticResource SelectTemplate}"
+                                                    ReadOnlyDataTemplate="{StaticResource ReadOnlyTemplate}"/>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
 </Application>

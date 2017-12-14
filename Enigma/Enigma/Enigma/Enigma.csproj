@@ -46,6 +46,7 @@
     <Compile Include="BlueTooth.Mock\IBlueToothDevice.cs" />
     <Compile Include="BlueTooth.Mock\IBlueToothManager.cs" />
     <Compile Include="Common\ISaveAndLoad.cs" />
+    <Compile Include="DataTemplateSelectors\TemplateSelector.cs" />
     <Compile Include="Extensions\ByteArrayExtensions.cs" />
     <Compile Include="ConnectPage.xaml.cs">
       <DependentUpon>ConnectPage.xaml</DependentUpon>
@@ -79,8 +80,10 @@
       <DependentUpon>AppResource.sv-SE.resx</DependentUpon>
     </Compile>
     <Compile Include="TranslateExtension.cs" />
+    <Compile Include="ViewModels\DeviceViewModel.cs" />
     <Compile Include="ViewModels\DiagnosticsViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="Views\DiagnosticsPage.xaml.cs">
       <DependentUpon>DiagnosticsPage.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,20 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.5.0.91635\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.91635\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="ConnectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -117,6 +134,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NavigationPageTabbed.xaml">
