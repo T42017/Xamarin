@@ -13,5 +13,10 @@ namespace Enigma.BlueTooth.Mock
             Task.Delay(5000).Wait();
             return new EnigmaDevice();
         }
+
+        public void initializeBluetooth()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
