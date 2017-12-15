@@ -20,7 +20,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Button Grid.Column="2" Text="ON/OFF" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -38,7 +37,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Button Grid.Column="2" Text="Input int32" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -56,7 +54,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Button Grid.Column="2" Text="Input int16" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -74,7 +71,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Button Grid.Column="2" Text="Input float" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -92,7 +88,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Button Grid.Column="2" Text="Input string" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -110,7 +105,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Button Grid.Column="2" Text="Dropdown" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>
@@ -128,7 +122,6 @@
                                 CommandParameter="{Binding}" />
                         <Label Grid.Column="1" Text="{Binding Name}" />
                         <Label Grid.Column="2" Text="{Binding Content}" />
-
                     </Grid>
                 </ViewCell>
             </DataTemplate>

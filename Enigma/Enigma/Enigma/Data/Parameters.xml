@@ -37,7 +37,6 @@
   </setParams>
 
   
-  
   <readParamsStandard>
     <param id="1" name="Actuator ID" type="ReadOnly" content ="1">
       <desc>Chuck meatball filet mignon, tail hamburger ham cupim t-bone sausage drumstick.</desc>
