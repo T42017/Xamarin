@@ -14,6 +14,7 @@ namespace Enigma
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConnectPage : ContentPage
     {
+
         private bool busy = false;
 
         public bool IsBusy
@@ -28,6 +29,7 @@ namespace Enigma
                 OnPropertyChanged("IsBusy");
             }
         }
+
 
         public ConnectPage()
         {
@@ -48,11 +50,6 @@ namespace Enigma
                     this.IsBusy = false;
                 }
             }
-        }
-
-        private void Continue(object sender, EventArgs e)
-        {
-
         }
 
         public void BluetoothManage()
