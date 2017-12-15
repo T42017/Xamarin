@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Enigma.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +14,8 @@ namespace Enigma
 	{
 		public MotionPage ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+            BindingContext = new MotionViewModel();
 		}
 	}
 }

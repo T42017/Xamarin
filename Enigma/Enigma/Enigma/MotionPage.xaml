@@ -4,20 +4,24 @@
              xmlns:local="clr-namespace:Enigma"
              x:Class="Enigma.MotionPage">
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate RotateLeftButton}"/>
-            <Button Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate RotateRightButton}"/>
-            <Button Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate MotionSpeedButton}"/>
-            <Button Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate AutoCalibrateButton}"/>
-        </Grid>
+        <StackLayout>
+            <Entry Text="{Binding ActuatorRotation}"></Entry>
+            <local:ActuatorControl ActuatorRotation="{Binding ActuatorRotation}"></local:ActuatorControl>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate RotateLeftButton}"/>
+                <Button Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate RotateRightButton}"/>
+                <Button Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate MotionSpeedButton}"/>
+                <Button Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{local:Translate AutoCalibrateButton}"/>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
