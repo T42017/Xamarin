@@ -215,6 +215,15 @@ namespace Enigma.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Speed.
+        /// </summary>
+        internal static string MotionSpeedButton {
+            get {
+                return ResourceManager.GetString("MotionSpeedButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pages.
         /// </summary>
         internal static string PagesText {
@@ -256,6 +265,24 @@ namespace Enigma.Resources {
         internal static string ResetAllButton {
             get {
                 return ResourceManager.GetString("ResetAllButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Left.
+        /// </summary>
+        internal static string RotateLeftButton {
+            get {
+                return ResourceManager.GetString("RotateLeftButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Right.
+        /// </summary>
+        internal static string RotateRightButton {
+            get {
+                return ResourceManager.GetString("RotateRightButton", resourceCulture);
             }
         }
         

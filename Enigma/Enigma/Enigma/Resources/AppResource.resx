@@ -253,4 +253,16 @@
     <value>SW Version:</value>
     <comment>Diagnostic page text</comment>
   </data>
+  <data name="MotionSpeedButton" xml:space="preserve">
+    <value>Speed</value>
+    <comment>Motion page button</comment>
+  </data>
+  <data name="RotateLeftButton" xml:space="preserve">
+    <value>Left</value>
+    <comment>Motion page button</comment>
+  </data>
+  <data name="RotateRightButton" xml:space="preserve">
+    <value>Right</value>
+    <comment>Motion page button</comment>
+  </data>
 </root>
