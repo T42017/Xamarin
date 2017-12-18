@@ -57,22 +57,22 @@ namespace Enigma.Droid
             }
 
             if (touchEventArgs.Event.Action != MotionEventActions.Move) return;
-
+            
             var dx = touchEventArgs.Event.RawX - (this.GetX() + this.Width / 2f);
             var dy = touchEventArgs.Event.RawY - (this.GetY() + this.Height / 2f);
             var angle = Math.Atan2(dy, dx) * 180 / Math.PI + 90;
 
-            var dx2 = _lastX - (this.GetX() + this.Width / 2f);
-            var dy2 = _lastY - (this.GetY() + this.Height / 2f);
-            var angle2 = Math.Atan2(dy2, dx2) * 180 / Math.PI + 90;
-            
+            //var dx2 = _lastX - (this.GetX() + this.Width / 2f);
+            //var dy2 = _lastY - (this.GetY() + this.Height / 2f);
+            //var angle2 = Math.Atan2(dy2, dx2) * 180 / Math.PI + 90;
+
             if (_control.ActuatorList.Count == 0)
                 _control.ActuatorList.Add(_control.ActuatorRotation);
 
-            _control.ActuatorRotation += (float) (angle - angle2);
-
-            //_control.ActuatorList.Add(_control.ActuatorRotation);
-            System.Diagnostics.Debug.WriteLine((float) angle + " " + (float) angle2);
+            _control.ActuatorRotation = (float) (angle);
+            
+            System.Diagnostics.Debug.WriteLine("mouse " + touchEventArgs.Event.RawX + " " + touchEventArgs.Event.RawY);
+            System.Diagnostics.Debug.WriteLine("this " + this.GetX() + " " + this.GetY());
 
             _lastX = touchEventArgs.Event.RawX;
             _lastY = touchEventArgs.Event.RawY;

@@ -5,7 +5,7 @@
              x:Class="Enigma.MotionPage">
     <ContentPage.Content>
         <StackLayout>
-            <Entry Text="{Binding ActuatorRotation}"></Entry>
+            <Label Text="{Binding ActuatorRotation}"></Label>
             <local:ActuatorControl ActuatorRotation="{Binding ActuatorRotation}"></local:ActuatorControl>
             <Grid>
                 <Grid.RowDefinitions>
