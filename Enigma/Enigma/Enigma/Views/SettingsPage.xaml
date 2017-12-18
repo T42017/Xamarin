@@ -7,10 +7,8 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-
                 <ListView ItemsSource="{Binding Parameters}" ItemTemplate="{StaticResource TemplateSelector}"
                           SeparatorColor="Black" />
-                
             </ScrollView>
             <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate ResetAllButton}" />
             <Button HorizontalOptions="Center" Margin="0" Text="{enigma:Translate LoadSettingsButton}" />

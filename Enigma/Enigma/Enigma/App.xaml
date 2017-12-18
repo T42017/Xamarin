@@ -18,7 +18,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Button Grid.Column="2" Text="ON/OFF" />
                     </Grid>
                 </ViewCell>
@@ -35,7 +35,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Button Grid.Column="2" Text="Input int32" />
                     </Grid>
                 </ViewCell>
@@ -52,7 +52,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Button Grid.Column="2" Text="Input int16" />
                     </Grid>
                 </ViewCell>
@@ -69,7 +69,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Button Grid.Column="2" Text="Input float" />
                     </Grid>
                 </ViewCell>
@@ -86,7 +86,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Button Grid.Column="2" Text="Input string" />
                     </Grid>
                 </ViewCell>
@@ -103,7 +103,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Button Grid.Column="2" Text="Dropdown" />
                     </Grid>
                 </ViewCell>
@@ -120,7 +120,7 @@
                         <Button Grid.Column="0" Text="?"
                                 Command="{Binding SettingsViewModel.ShowInfoCommand, Source={x:Static viewModels:ViewModelLocator.Current}}"
                                 CommandParameter="{Binding}" />
-                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label Grid.Column="1" Text="{Binding TranslatedName}" />
                         <Label Grid.Column="2" Text="{Binding Content}" />
                     </Grid>
                 </ViewCell>
@@ -135,7 +135,5 @@
                                                     SelectDataTemplate="{StaticResource SelectTemplate}"
                                                     ReadOnlyDataTemplate="{StaticResource ReadOnlyTemplate}"/>
         </ResourceDictionary>
-
-
     </Application.Resources>
 </Application>

@@ -24,7 +24,7 @@ namespace Enigma
         public DiagnosticsViewModel()
         {
             ShowInfoCommand = new Command<Parameter>(OnShowInfoCommand);
-            Parameters = DeviceViewModel.Instance.Parameters;
+            Parameters = DeviceViewModel.Instance.ParametersDiagnostics;
         }
 
         public IEnumerable<Parameter> Parameters

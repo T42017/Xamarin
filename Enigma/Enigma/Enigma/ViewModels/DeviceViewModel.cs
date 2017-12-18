@@ -16,10 +16,12 @@ namespace Enigma.ViewModels
     public class DeviceViewModel : INotifyPropertyChanged
     {
         private IEnumerable<Parameter> _parameters;
-       
+        private IEnumerable<Parameter> _parametersDiagnostic;
+
         private DeviceViewModel()
         {
             Parameters = LoadParameterData().ToList();
+            ParametersDiagnostics = LoadDiagnosticsParameterData().ToList();
         }
 
         public static DeviceViewModel Instance = new DeviceViewModel();
@@ -30,7 +32,17 @@ namespace Enigma.ViewModels
             set
             {
                 _parameters = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(Parameters));
+            }
+        }
+
+        public IEnumerable<Parameter> ParametersDiagnostics
+        {
+            get => _parametersDiagnostic;
+            set
+            {
+                _parametersDiagnostic = value;
+                OnPropertyChanged(nameof(ParametersDiagnostics));
             }
         }
 
@@ -59,6 +71,31 @@ namespace Enigma.ViewModels
                 };
             return parameters;
         }
+
+        private IEnumerable<Parameter> LoadDiagnosticsParameterData()
+        {
+            var assembly = typeof(DiagnosticsViewModel).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream("Enigma.Data.Parameters.xml");
+            var text = "";
+            using (var reader = new StreamReader(stream))
+            {
+                text = reader.ReadToEnd();
+            }
+
+            var doc = XDocument.Parse(text);
+
+            var parametersDiagnostic = from s in doc.Descendants("readParamsStandard").Descendants("param")
+                select new Parameter
+                {
+                    Id = ushort.Parse(s.Attribute("id").Value),
+                    Name = s.Attribute("name").Value,
+                    Desc = s.Element("desc").Value,
+                    Type = s.Attribute("type").Value,
+                    Content = s.Attribute("content").Value
+                };
+            return parametersDiagnostic;
+        }
+
         #endregion
 
         #region INotifyPropertyChanged
