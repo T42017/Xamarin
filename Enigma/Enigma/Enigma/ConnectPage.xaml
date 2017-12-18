@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:enigma="clr-namespace:Enigma;assembly=Enigma"
     x:Class="Enigma.ConnectPage"
-    x:Name="StartPage">
+    x:Name="StartPage"
+    BackgroundImage="splashscreendark.png">
 
     <ContentPage.Content>
         <Grid>

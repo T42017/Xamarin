@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
   <item>
-    <color android:color="@color/splash_background"/>
+    <bitmap
+      android:src="@drawable/splashscreen"
+      android:gravity="center_horizontal|center_vertical"/>
   </item>
-
-  <item>
-      <bitmap
-        android:src="@drawable/ec_logo"
-        android:tileMode="disabled"
-        android:gravity="center"
-        layout_width="100dp"/>
+  <item android:top="20dp">
+    <bitmap android:gravity="left|top" android:src="@drawable/ESBElogo33"/>
+  </item>
+  <item android:bottom="10dp">
+    <bitmap android:gravity="center|bottom" android:src="@drawable/since"/>
   </item>
 </layer-list>
