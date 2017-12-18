@@ -222,6 +222,7 @@
     <AndroidResource Include="Resources\drawable\ESBElogo25.png" />
     <AndroidResource Include="Resources\drawable\ESBElogo33.png" />
     <AndroidResource Include="Resources\drawable\Since.png" />
+    <AndroidResource Include="Resources\drawable\splashscreendark.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml">
