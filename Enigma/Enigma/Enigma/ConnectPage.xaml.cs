@@ -54,16 +54,19 @@ namespace Enigma
 
         public void BluetoothManage()
         {
-            IBlueToothManager manager = DependencyService.Get<IBlueToothManager>();
-            var device = manager.Connect();
-            var buffer = SLIPPacket.ToByteArray(new Parameter()
-            {
-                Id = 1,
-                Value = 0
-            });
-            device.Write(buffer, 0, buffer.Length);
+            //InitializeBluetooth();
 
-            var hmm = device.BytesToRead;
+            var manager = DependencyService.Get<IBlueToothManager>();
+            manager.initializeBluetooth();
+            //var device = manager.Connect();
+            //var buffer = SLIPPacket.ToByteArray(new Parameter()
+            //{
+            //Id = 1,
+            //Value = 0
+            //});
+            //device.Write(buffer, 0, buffer.Length);
+
+            //var hmm = device.BytesToRead;
         }
 
         private void BluetoothConnect(object sender, EventArgs e)

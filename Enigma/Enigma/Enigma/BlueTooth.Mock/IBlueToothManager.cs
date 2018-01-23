@@ -9,5 +9,6 @@ namespace Enigma.BlueTooth.Mock
     public interface IBlueToothManager
     {
         IBlueToothDevice Connect();
+        void initializeBluetooth();
     }
 }
