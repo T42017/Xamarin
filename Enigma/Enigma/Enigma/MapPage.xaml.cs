@@ -12,14 +12,14 @@ namespace Enigma
 	{
 		public MapPage ()
 		{
+		   
 		    InitializeComponent();
 		    var map = new Map()
 		    {
-                MyLocationEnabled = true,
-                		        
-		        HeightRequest = 320,
-		        WidthRequest = 200,
-		        VerticalOptions = LayoutOptions.CenterAndExpand
+               
+                MyLocationEnabled = true,  
+		        VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand
 		    };
             
 		    var position = new Position(55.686047, 13.185772);
@@ -36,6 +36,7 @@ namespace Enigma
 		    map.Pins.Add(pin);
 		    map.UiSettings.CompassEnabled = true;
 		    map.UiSettings.MyLocationButtonEnabled = true;
+		    map.UiSettings.ZoomControlsEnabled = true;
 		    var position1= new Position(56.172442, 14.860493);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(position1, Distance.FromKilometers(150)));
 		    this.Content = map;

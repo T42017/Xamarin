@@ -4,11 +4,10 @@
            
              xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              x:Class="Enigma.MapPage">
-    <StackLayout VerticalOptions="Center" Padding="30">
-        <googleMaps:Map WidthRequest="240" HeightRequest="120"
+    <StackLayout VerticalOptions="EndAndExpand" Padding="40">
+        <googleMaps:Map WidthRequest="240" HeightRequest="380"
                   x:Class="Enigma.MapPage"   
-                  x:Name="MyMap"         
-               
+                  x:Name="MyMap"                           
                   IsShowingUser="true"
                   MapType="Street"                   
         />
