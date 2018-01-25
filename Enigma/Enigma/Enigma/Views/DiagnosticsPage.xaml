@@ -22,7 +22,7 @@
                 </Grid.RowDefinitions>
 
                 <Button Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{enigma:Translate AddNotesButton}"/>
-                <Button Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{enigma:Translate SaveButton}"/>
+                <Button Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{enigma:Translate SaveButton}" Clicked="saveclick"/>
                 <Button Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{enigma:Translate StandardSettingsButton}"/>
                 <Button Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{enigma:Translate AdvancedSettingsButton}"/>
             </Grid>
