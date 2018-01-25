@@ -16,7 +16,21 @@
                         VerticalOptions="Center" BackgroundColor="#3498db" BorderRadius="15" TextColor="White"
                         Margin="0,100,0,0" />
             </StackLayout>
-
+            <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsClicked}" BackgroundColor="White" x:Name="Contentlist">
+                <StackLayout BackgroundColor="#eee"
+                                         Orientation="Vertical" x:Name="Stacklist">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnButtonTapped" NumberOfTapsRequired="1"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="Blutetooth Device"
+                                           TextColor="#f35e20" />
+                        <Label Text="xd"
+                                           HorizontalOptions="EndAndExpand"
+                                           TextColor="#503026" />
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
             <ContentView IsVisible="{Binding Source={x:Reference StartPage}, Path=IsBusy}" BackgroundColor="#91000000">
                 <StackLayout VerticalOptions="Center">
                     <ActivityIndicator Color="#3498db"

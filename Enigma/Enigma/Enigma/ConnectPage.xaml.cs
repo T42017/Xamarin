@@ -16,6 +16,8 @@ namespace Enigma
     {
 
         private bool busy = false;
+        private bool Clicked = false;
+
 
         public bool IsBusy
         {
@@ -29,6 +31,20 @@ namespace Enigma
                 OnPropertyChanged("IsBusy");
             }
         }
+
+        public bool IsClicked
+        {
+            get { return Clicked; }
+            set
+            {
+                if (Clicked == value)
+                    return;
+
+                Clicked = value;
+                OnPropertyChanged("IsClicked");
+            }
+        }
+
 
 
         public ConnectPage()
@@ -71,7 +87,23 @@ namespace Enigma
 
         private void BluetoothConnect(object sender, EventArgs e)
         {
+            if (!this.IsClicked)
+            {
+                this.IsClicked = true;
+            }
             BluetoothConnecting();
+        }
+
+        private void OnButtonTapped(object sender, EventArgs e)
+        {
+            StackLayout item1 = new StackLayout();
+            Label label1 = new Label();
+
+            label1.Text = "item 2";
+
+            item1.Children.Add(label1);
+
+            Stacklist.Children.Add(item1);
         }
     }
 }
