@@ -8,13 +8,13 @@ using Plugin.BLE;
 using Plugin.BLE.Abstractions.Contracts;
 using Plugin.BLE.Abstractions.Exceptions;
 using Xamarin.Forms;
-using BlueToothManager = Enigma.Droid.BlueToothManager;
+using BluetoothDeviceManager = Enigma.Droid.BluetoothDeviceManager;
 
-[assembly: Dependency(typeof(BlueToothManager))]
+[assembly: Dependency(typeof(BluetoothDeviceManager))]
 
 namespace Enigma.Droid
 {
-    public class BlueToothManager : IBlueToothManager
+    public class BluetoothDeviceManager : IBlueToothManager
     {
         private static Guid specificService = new Guid("e093f3b5-00a3-a9e5-9eca-40016e0edc24");
         public List<IDevice> deviceList = new List<IDevice>();
