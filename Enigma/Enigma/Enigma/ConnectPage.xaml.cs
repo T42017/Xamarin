@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Enigma.BlueTooth.Mock;
 using Enigma.Model;
+using Plugin.BLE.Abstractions.Contracts;
 using Xamarin.Forms;
+using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
 
 namespace Enigma
@@ -14,7 +16,7 @@ namespace Enigma
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConnectPage : ContentPage
     {
-
+        private List<IDevice> devices;
         private bool busy = false;
         private bool Clicked = false;
 
@@ -100,7 +102,7 @@ namespace Enigma
             Label label1 = new Label();
 
             label1.Text = "item 2";
-
+            
             item1.Children.Add(label1);
 
             Stacklist.Children.Add(item1);

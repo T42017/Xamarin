@@ -17,7 +17,7 @@ namespace Enigma.Droid
     public class BlueToothManager : IBlueToothManager
     {
         private static Guid specificService = new Guid("e093f3b5-00a3-a9e5-9eca-40016e0edc24");
-        private readonly List<IDevice> deviceList = new List<IDevice>();
+        public List<IDevice> deviceList = new List<IDevice>();
         private IAdapter adapter;
         private IBluetoothLE ble;
         private ICharacteristic theOne;
